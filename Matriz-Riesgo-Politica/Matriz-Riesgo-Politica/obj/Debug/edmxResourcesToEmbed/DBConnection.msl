@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Gestion_RiesgosModelStoreContainer" CdmEntityContainer="Gestion_RiesgosEntities">
+    <EntitySetMapping Name="accionRiesgoes">
+      <EntityTypeMapping TypeName="Gestion_RiesgosModel.accionRiesgo">
+        <MappingFragment StoreEntitySet="accionRiesgo">
+          <ScalarProperty Name="codigoAccion" ColumnName="codigoAccion" />
+          <ScalarProperty Name="codigoPosibilidad" ColumnName="codigoPosibilidad" />
+          <ScalarProperty Name="codigoImpacto" ColumnName="codigoImpacto" />
+          <ScalarProperty Name="descripcionAccion" ColumnName="descripcionAccion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Activos">
+      <EntityTypeMapping TypeName="Gestion_RiesgosModel.Activo">
+        <MappingFragment StoreEntitySet="Activos">
+          <ScalarProperty Name="codigoActivo" ColumnName="codigoActivo" />
+          <ScalarProperty Name="nombreActivo" ColumnName="nombreActivo" />
+          <ScalarProperty Name="costoActivo" ColumnName="costoActivo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cabeceraAnalisisRiesgoes">
+      <EntityTypeMapping TypeName="Gestion_RiesgosModel.cabeceraAnalisisRiesgo">
+        <MappingFragment StoreEntitySet="cabeceraAnalisisRiesgo">
+          <ScalarProperty Name="codigoAnalisisRiesgo" ColumnName="codigoAnalisisRiesgo" />
+          <ScalarProperty Name="descripcionAnalisisRiesgo" ColumnName="descripcionAnalisisRiesgo" />
+          <ScalarProperty Name="fechaCreacion" ColumnName="fechaCreacion" />
+          <ScalarProperty Name="nombreAuditor" ColumnName="nombreAuditor" />
+          <ScalarProperty Name="codigoActivo" ColumnName="codigoActivo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="categoriasAmenazas">
+      <EntityTypeMapping TypeName="Gestion_RiesgosModel.categoriasAmenaza">
+        <MappingFragment StoreEntitySet="categoriasAmenazas">
+          <ScalarProperty Name="codigoCategoria" ColumnName="codigoCategoria" />
+          <ScalarProperty Name="nombreCategoriaRiesgo" ColumnName="nombreCategoriaRiesgo" />
+          <ScalarProperty Name="descripcionCategoriaRiesgo" ColumnName="descripcionCategoriaRiesgo" />
+          <ScalarProperty Name="tipoCreacionAmenaza" ColumnName="tipoCreacionAmenaza" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="detalleAnalisisRiesgoes">
+      <EntityTypeMapping TypeName="Gestion_RiesgosModel.detalleAnalisisRiesgo">
+        <MappingFragment StoreEntitySet="detalleAnalisisRiesgo">
+          <ScalarProperty Name="codigoDetalleRiesgo" ColumnName="codigoDetalleRiesgo" />
+          <ScalarProperty Name="codigoAnalisisRiesgo" ColumnName="codigoAnalisisRiesgo" />
+          <ScalarProperty Name="codigoCategoriaAmenza" ColumnName="codigoCategoriaAmenza" />
+          <ScalarProperty Name="codigoImpacto" ColumnName="codigoImpacto" />
+          <ScalarProperty Name="codigoPosibilidad" ColumnName="codigoPosibilidad" />
+          <ScalarProperty Name="nombreRiesgo" ColumnName="nombreRiesgo" />
+          <ScalarProperty Name="codigoAccion" ColumnName="codigoAccion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="impactoRiesgoes">
+      <EntityTypeMapping TypeName="Gestion_RiesgosModel.impactoRiesgo">
+        <MappingFragment StoreEntitySet="impactoRiesgo">
+          <ScalarProperty Name="codigoImpacto" ColumnName="codigoImpacto" />
+          <ScalarProperty Name="nivelImpacto" ColumnName="nivelImpacto" />
+          <ScalarProperty Name="puntajeImpacto" ColumnName="puntajeImpacto" />
+          <ScalarProperty Name="descripcionImpacto" ColumnName="descripcionImpacto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="posibilidadRiesgoes">
+      <EntityTypeMapping TypeName="Gestion_RiesgosModel.posibilidadRiesgo">
+        <MappingFragment StoreEntitySet="posibilidadRiesgo">
+          <ScalarProperty Name="codigoPosibilidad" ColumnName="codigoPosibilidad" />
+          <ScalarProperty Name="nivelPosibilidad" ColumnName="nivelPosibilidad" />
+          <ScalarProperty Name="puntajePosibilidad" ColumnName="puntajePosibilidad" />
+          <ScalarProperty Name="descripcionPosibilidad" ColumnName="descripcionPosibilidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="Gestion_RiesgosModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Gestion_RiesgosModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="accionRiesgo">
+    <Key>
+      <PropertyRef Name="codigoAccion" />
+    </Key>
+    <Property Name="codigoAccion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codigoPosibilidad" Type="int" Nullable="false" />
+    <Property Name="codigoImpacto" Type="int" Nullable="false" />
+    <Property Name="descripcionAccion" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Activos">
+    <Key>
+      <PropertyRef Name="codigoActivo" />
+    </Key>
+    <Property Name="codigoActivo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombreActivo" Type="varchar" MaxLength="50" />
+    <Property Name="costoActivo" Type="decimal" Precision="8" Scale="2" />
+  </EntityType>
+  <EntityType Name="cabeceraAnalisisRiesgo">
+    <Key>
+      <PropertyRef Name="codigoAnalisisRiesgo" />
+    </Key>
+    <Property Name="codigoAnalisisRiesgo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcionAnalisisRiesgo" Type="varchar" MaxLength="50" />
+    <Property Name="fechaCreacion" Type="datetime" />
+    <Property Name="nombreAuditor" Type="varchar" MaxLength="50" />
+    <Property Name="codigoActivo" Type="int" />
+  </EntityType>
+  <EntityType Name="categoriasAmenazas">
+    <Key>
+      <PropertyRef Name="codigoCategoria" />
+    </Key>
+    <Property Name="codigoCategoria" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombreCategoriaRiesgo" Type="varchar" MaxLength="50" />
+    <Property Name="descripcionCategoriaRiesgo" Type="varchar(max)" />
+    <Property Name="tipoCreacionAmenaza" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="detalleAnalisisRiesgo">
+    <Key>
+      <PropertyRef Name="codigoDetalleRiesgo" />
+      <PropertyRef Name="codigoAnalisisRiesgo" />
+    </Key>
+    <Property Name="codigoDetalleRiesgo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codigoAnalisisRiesgo" Type="int" Nullable="false" />
+    <Property Name="codigoCategoriaAmenza" Type="int" />
+    <Property Name="codigoImpacto" Type="int" />
+    <Property Name="codigoPosibilidad" Type="int" />
+    <Property Name="nombreRiesgo" Type="varchar" MaxLength="50" />
+    <Property Name="codigoAccion" Type="int" />
+  </EntityType>
+  <EntityType Name="impactoRiesgo">
+    <Key>
+      <PropertyRef Name="codigoImpacto" />
+    </Key>
+    <Property Name="codigoImpacto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nivelImpacto" Type="varchar" MaxLength="50" />
+    <Property Name="puntajeImpacto" Type="int" />
+    <Property Name="descripcionImpacto" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="posibilidadRiesgo">
+    <Key>
+      <PropertyRef Name="codigoPosibilidad" />
+    </Key>
+    <Property Name="codigoPosibilidad" Type="int" Nullable="false" />
+    <Property Name="nivelPosibilidad" Type="varchar" MaxLength="50" />
+    <Property Name="puntajePosibilidad" Type="int" />
+    <Property Name="descripcionPosibilidad" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK_AccionRiesgo_impactoRiesgo">
+    <End Role="impactoRiesgo" Type="Self.impactoRiesgo" Multiplicity="1" />
+    <End Role="accionRiesgo" Type="Self.accionRiesgo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="impactoRiesgo">
+        <PropertyRef Name="codigoImpacto" />
+      </Principal>
+      <Dependent Role="accionRiesgo">
+        <PropertyRef Name="codigoImpacto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AccionRiesgo_posibilidadRiesgo">
+    <End Role="posibilidadRiesgo" Type="Self.posibilidadRiesgo" Multiplicity="1" />
+    <End Role="accionRiesgo" Type="Self.accionRiesgo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="posibilidadRiesgo">
+        <PropertyRef Name="codigoPosibilidad" />
+      </Principal>
+      <Dependent Role="accionRiesgo">
+        <PropertyRef Name="codigoPosibilidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cabeceraAnalisisRiesgo_Activos">
+    <End Role="Activos" Type="Self.Activos" Multiplicity="0..1" />
+    <End Role="cabeceraAnalisisRiesgo" Type="Self.cabeceraAnalisisRiesgo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Activos">
+        <PropertyRef Name="codigoActivo" />
+      </Principal>
+      <Dependent Role="cabeceraAnalisisRiesgo">
+        <PropertyRef Name="codigoActivo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_detalleAnalisisRiesgo_AccionRiesgo">
+    <End Role="accionRiesgo" Type="Self.accionRiesgo" Multiplicity="0..1" />
+    <End Role="detalleAnalisisRiesgo" Type="Self.detalleAnalisisRiesgo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="accionRiesgo">
+        <PropertyRef Name="codigoAccion" />
+      </Principal>
+      <Dependent Role="detalleAnalisisRiesgo">
+        <PropertyRef Name="codigoAccion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_detalleAnalisisRiesgo_cabeceraAnalisisRiesgo">
+    <End Role="cabeceraAnalisisRiesgo" Type="Self.cabeceraAnalisisRiesgo" Multiplicity="1" />
+    <End Role="detalleAnalisisRiesgo" Type="Self.detalleAnalisisRiesgo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cabeceraAnalisisRiesgo">
+        <PropertyRef Name="codigoAnalisisRiesgo" />
+      </Principal>
+      <Dependent Role="detalleAnalisisRiesgo">
+        <PropertyRef Name="codigoAnalisisRiesgo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_detalleAnalisisRiesgo_categoriasAmenazas">
+    <End Role="categoriasAmenazas" Type="Self.categoriasAmenazas" Multiplicity="0..1" />
+    <End Role="detalleAnalisisRiesgo" Type="Self.detalleAnalisisRiesgo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="categoriasAmenazas">
+        <PropertyRef Name="codigoCategoria" />
+      </Principal>
+      <Dependent Role="detalleAnalisisRiesgo">
+        <PropertyRef Name="codigoCategoriaAmenza" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_detalleAnalisisRiesgo_impactoRiesgo">
+    <End Role="impactoRiesgo" Type="Self.impactoRiesgo" Multiplicity="0..1" />
+    <End Role="detalleAnalisisRiesgo" Type="Self.detalleAnalisisRiesgo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="impactoRiesgo">
+        <PropertyRef Name="codigoImpacto" />
+      </Principal>
+      <Dependent Role="detalleAnalisisRiesgo">
+        <PropertyRef Name="codigoImpacto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_detalleAnalisisRiesgo_posibilidadRiesgo">
+    <End Role="posibilidadRiesgo" Type="Self.posibilidadRiesgo" Multiplicity="0..1" />
+    <End Role="detalleAnalisisRiesgo" Type="Self.detalleAnalisisRiesgo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="posibilidadRiesgo">
+        <PropertyRef Name="codigoPosibilidad" />
+      </Principal>
+      <Dependent Role="detalleAnalisisRiesgo">
+        <PropertyRef Name="codigoPosibilidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Gestion_RiesgosModelStoreContainer">
+    <EntitySet Name="accionRiesgo" EntityType="Self.accionRiesgo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Activos" EntityType="Self.Activos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cabeceraAnalisisRiesgo" EntityType="Self.cabeceraAnalisisRiesgo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="categoriasAmenazas" EntityType="Self.categoriasAmenazas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="detalleAnalisisRiesgo" EntityType="Self.detalleAnalisisRiesgo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="impactoRiesgo" EntityType="Self.impactoRiesgo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="posibilidadRiesgo" EntityType="Self.posibilidadRiesgo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_AccionRiesgo_impactoRiesgo" Association="Self.FK_AccionRiesgo_impactoRiesgo">
+      <End Role="impactoRiesgo" EntitySet="impactoRiesgo" />
+      <End Role="accionRiesgo" EntitySet="accionRiesgo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AccionRiesgo_posibilidadRiesgo" Association="Self.FK_AccionRiesgo_posibilidadRiesgo">
+      <End Role="posibilidadRiesgo" EntitySet="posibilidadRiesgo" />
+      <End Role="accionRiesgo" EntitySet="accionRiesgo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cabeceraAnalisisRiesgo_Activos" Association="Self.FK_cabeceraAnalisisRiesgo_Activos">
+      <End Role="Activos" EntitySet="Activos" />
+      <End Role="cabeceraAnalisisRiesgo" EntitySet="cabeceraAnalisisRiesgo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_detalleAnalisisRiesgo_AccionRiesgo" Association="Self.FK_detalleAnalisisRiesgo_AccionRiesgo">
+      <End Role="accionRiesgo" EntitySet="accionRiesgo" />
+      <End Role="detalleAnalisisRiesgo" EntitySet="detalleAnalisisRiesgo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_detalleAnalisisRiesgo_cabeceraAnalisisRiesgo" Association="Self.FK_detalleAnalisisRiesgo_cabeceraAnalisisRiesgo">
+      <End Role="cabeceraAnalisisRiesgo" EntitySet="cabeceraAnalisisRiesgo" />
+      <End Role="detalleAnalisisRiesgo" EntitySet="detalleAnalisisRiesgo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_detalleAnalisisRiesgo_categoriasAmenazas" Association="Self.FK_detalleAnalisisRiesgo_categoriasAmenazas">
+      <End Role="categoriasAmenazas" EntitySet="categoriasAmenazas" />
+      <End Role="detalleAnalisisRiesgo" EntitySet="detalleAnalisisRiesgo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_detalleAnalisisRiesgo_impactoRiesgo" Association="Self.FK_detalleAnalisisRiesgo_impactoRiesgo">
+      <End Role="impactoRiesgo" EntitySet="impactoRiesgo" />
+      <End Role="detalleAnalisisRiesgo" EntitySet="detalleAnalisisRiesgo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_detalleAnalisisRiesgo_posibilidadRiesgo" Association="Self.FK_detalleAnalisisRiesgo_posibilidadRiesgo">
+      <End Role="posibilidadRiesgo" EntitySet="posibilidadRiesgo" />
+      <End Role="detalleAnalisisRiesgo" EntitySet="detalleAnalisisRiesgo" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
