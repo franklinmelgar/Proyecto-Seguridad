@@ -74,7 +74,7 @@
             this.tabContenedorPrincipal.Controls.Add(this.tabImpacto);
             this.tabContenedorPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabContenedorPrincipal.Location = new System.Drawing.Point(182, 0);
-            this.tabContenedorPrincipal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabContenedorPrincipal.Margin = new System.Windows.Forms.Padding(2);
             this.tabContenedorPrincipal.Multiline = true;
             this.tabContenedorPrincipal.Name = "tabContenedorPrincipal";
             this.tabContenedorPrincipal.SelectedIndex = 0;
@@ -95,9 +95,9 @@
             this.tabActivos.Controls.Add(this.panel3);
             this.tabActivos.Controls.Add(this.label1);
             this.tabActivos.Location = new System.Drawing.Point(4, 4);
-            this.tabActivos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabActivos.Margin = new System.Windows.Forms.Padding(2);
             this.tabActivos.Name = "tabActivos";
-            this.tabActivos.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabActivos.Padding = new System.Windows.Forms.Padding(2);
             this.tabActivos.Size = new System.Drawing.Size(1010, 584);
             this.tabActivos.TabIndex = 0;
             this.tabActivos.Text = "Activos";
@@ -107,7 +107,7 @@
             this.btEliminarActivo.Image = global::Matriz_Riesgo_Politica.Properties.Resources.delete;
             this.btEliminarActivo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btEliminarActivo.Location = new System.Drawing.Point(746, 259);
-            this.btEliminarActivo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btEliminarActivo.Margin = new System.Windows.Forms.Padding(2);
             this.btEliminarActivo.Name = "btEliminarActivo";
             this.btEliminarActivo.Size = new System.Drawing.Size(242, 32);
             this.btEliminarActivo.TabIndex = 12;
@@ -119,7 +119,7 @@
             this.btModificarActivo.Image = global::Matriz_Riesgo_Politica.Properties.Resources.edit;
             this.btModificarActivo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btModificarActivo.Location = new System.Drawing.Point(746, 220);
-            this.btModificarActivo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btModificarActivo.Margin = new System.Windows.Forms.Padding(2);
             this.btModificarActivo.Name = "btModificarActivo";
             this.btModificarActivo.Size = new System.Drawing.Size(242, 32);
             this.btModificarActivo.TabIndex = 11;
@@ -131,7 +131,7 @@
             this.btAgregarActivos.Image = global::Matriz_Riesgo_Politica.Properties.Resources.add;
             this.btAgregarActivos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btAgregarActivos.Location = new System.Drawing.Point(746, 177);
-            this.btAgregarActivos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btAgregarActivos.Margin = new System.Windows.Forms.Padding(2);
             this.btAgregarActivos.Name = "btAgregarActivos";
             this.btAgregarActivos.Size = new System.Drawing.Size(242, 32);
             this.btAgregarActivos.TabIndex = 10;
@@ -143,7 +143,7 @@
             this.gridActivos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridActivos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridActivos.Location = new System.Drawing.Point(22, 167);
-            this.gridActivos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gridActivos.Margin = new System.Windows.Forms.Padding(2);
             this.gridActivos.Name = "gridActivos";
             this.gridActivos.ReadOnly = true;
             this.gridActivos.RowHeadersWidth = 51;
@@ -164,7 +164,7 @@
             // txtBuscarActivo
             // 
             this.txtBuscarActivo.Location = new System.Drawing.Point(29, 98);
-            this.txtBuscarActivo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBuscarActivo.Margin = new System.Windows.Forms.Padding(2);
             this.txtBuscarActivo.Name = "txtBuscarActivo";
             this.txtBuscarActivo.Size = new System.Drawing.Size(696, 20);
             this.txtBuscarActivo.TabIndex = 7;
@@ -183,7 +183,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.Black;
             this.panel3.Location = new System.Drawing.Point(22, 54);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(979, 2);
             this.panel3.TabIndex = 5;
@@ -212,9 +212,9 @@
             this.tabAmenazas.Controls.Add(this.panel4);
             this.tabAmenazas.Controls.Add(this.label6);
             this.tabAmenazas.Location = new System.Drawing.Point(4, 4);
-            this.tabAmenazas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabAmenazas.Margin = new System.Windows.Forms.Padding(2);
             this.tabAmenazas.Name = "tabAmenazas";
-            this.tabAmenazas.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabAmenazas.Padding = new System.Windows.Forms.Padding(2);
             this.tabAmenazas.Size = new System.Drawing.Size(1010, 584);
             this.tabAmenazas.TabIndex = 1;
             this.tabAmenazas.Text = "Amenzas";
@@ -224,7 +224,7 @@
             this.btEliminarAmenaza.Image = global::Matriz_Riesgo_Politica.Properties.Resources.delete;
             this.btEliminarAmenaza.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btEliminarAmenaza.Location = new System.Drawing.Point(742, 259);
-            this.btEliminarAmenaza.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btEliminarAmenaza.Margin = new System.Windows.Forms.Padding(2);
             this.btEliminarAmenaza.Name = "btEliminarAmenaza";
             this.btEliminarAmenaza.Size = new System.Drawing.Size(242, 32);
             this.btEliminarAmenaza.TabIndex = 21;
@@ -236,7 +236,7 @@
             this.btModificarAmenaza.Image = global::Matriz_Riesgo_Politica.Properties.Resources.edit;
             this.btModificarAmenaza.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btModificarAmenaza.Location = new System.Drawing.Point(742, 220);
-            this.btModificarAmenaza.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btModificarAmenaza.Margin = new System.Windows.Forms.Padding(2);
             this.btModificarAmenaza.Name = "btModificarAmenaza";
             this.btModificarAmenaza.Size = new System.Drawing.Size(242, 32);
             this.btModificarAmenaza.TabIndex = 20;
@@ -248,7 +248,7 @@
             this.btAgregarAmenaza.Image = global::Matriz_Riesgo_Politica.Properties.Resources.add;
             this.btAgregarAmenaza.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btAgregarAmenaza.Location = new System.Drawing.Point(742, 177);
-            this.btAgregarAmenaza.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btAgregarAmenaza.Margin = new System.Windows.Forms.Padding(2);
             this.btAgregarAmenaza.Name = "btAgregarAmenaza";
             this.btAgregarAmenaza.Size = new System.Drawing.Size(242, 32);
             this.btAgregarAmenaza.TabIndex = 19;
@@ -260,7 +260,7 @@
             this.gridAmenzas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridAmenzas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridAmenzas.Location = new System.Drawing.Point(26, 167);
-            this.gridAmenzas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gridAmenzas.Margin = new System.Windows.Forms.Padding(2);
             this.gridAmenzas.Name = "gridAmenzas";
             this.gridAmenzas.ReadOnly = true;
             this.gridAmenzas.RowHeadersWidth = 51;
@@ -281,7 +281,7 @@
             // txtBuscarAmenaza
             // 
             this.txtBuscarAmenaza.Location = new System.Drawing.Point(26, 98);
-            this.txtBuscarAmenaza.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBuscarAmenaza.Margin = new System.Windows.Forms.Padding(2);
             this.txtBuscarAmenaza.Name = "txtBuscarAmenaza";
             this.txtBuscarAmenaza.Size = new System.Drawing.Size(696, 20);
             this.txtBuscarAmenaza.TabIndex = 16;
@@ -300,7 +300,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.Black;
             this.panel4.Location = new System.Drawing.Point(20, 54);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(979, 2);
             this.panel4.TabIndex = 14;
@@ -320,9 +320,9 @@
             // 
             this.tabPosibilidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.tabPosibilidad.Location = new System.Drawing.Point(4, 4);
-            this.tabPosibilidad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPosibilidad.Margin = new System.Windows.Forms.Padding(2);
             this.tabPosibilidad.Name = "tabPosibilidad";
-            this.tabPosibilidad.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPosibilidad.Padding = new System.Windows.Forms.Padding(2);
             this.tabPosibilidad.Size = new System.Drawing.Size(1010, 584);
             this.tabPosibilidad.TabIndex = 2;
             this.tabPosibilidad.Text = "Posibilidad";
@@ -331,9 +331,9 @@
             // 
             this.tabImpacto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.tabImpacto.Location = new System.Drawing.Point(4, 4);
-            this.tabImpacto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabImpacto.Margin = new System.Windows.Forms.Padding(2);
             this.tabImpacto.Name = "tabImpacto";
-            this.tabImpacto.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabImpacto.Padding = new System.Windows.Forms.Padding(2);
             this.tabImpacto.Size = new System.Drawing.Size(1010, 584);
             this.tabImpacto.TabIndex = 3;
             this.tabImpacto.Text = "Impacto";
@@ -348,7 +348,7 @@
             this.panel1.Controls.Add(this.btActivos);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(182, 610);
             this.panel1.TabIndex = 0;
@@ -357,7 +357,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.panel2.Location = new System.Drawing.Point(0, 74);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(181, 3);
             this.panel2.TabIndex = 4;
@@ -375,11 +375,11 @@
             this.btImpacto.Image = global::Matriz_Riesgo_Politica.Properties.Resources.Impacto;
             this.btImpacto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btImpacto.Location = new System.Drawing.Point(0, 262);
-            this.btImpacto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btImpacto.Margin = new System.Windows.Forms.Padding(2);
             this.btImpacto.Name = "btImpacto";
             this.btImpacto.Size = new System.Drawing.Size(182, 49);
             this.btImpacto.TabIndex = 3;
-            this.btImpacto.Text = "Impacto";
+            this.btImpacto.Text = "Impactooo";
             this.btImpacto.UseVisualStyleBackColor = false;
             this.btImpacto.Click += new System.EventHandler(this.btImpacto_Click);
             // 
@@ -396,7 +396,7 @@
             this.btPosibilidad.Image = global::Matriz_Riesgo_Politica.Properties.Resources.Posibilidad;
             this.btPosibilidad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btPosibilidad.Location = new System.Drawing.Point(0, 209);
-            this.btPosibilidad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btPosibilidad.Margin = new System.Windows.Forms.Padding(2);
             this.btPosibilidad.Name = "btPosibilidad";
             this.btPosibilidad.Size = new System.Drawing.Size(182, 49);
             this.btPosibilidad.TabIndex = 2;
@@ -417,7 +417,7 @@
             this.btAmenazas.Image = global::Matriz_Riesgo_Politica.Properties.Resources.Amenazas;
             this.btAmenazas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btAmenazas.Location = new System.Drawing.Point(0, 155);
-            this.btAmenazas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btAmenazas.Margin = new System.Windows.Forms.Padding(2);
             this.btAmenazas.Name = "btAmenazas";
             this.btAmenazas.Size = new System.Drawing.Size(182, 49);
             this.btAmenazas.TabIndex = 1;
@@ -440,7 +440,7 @@
             this.btActivos.Image = global::Matriz_Riesgo_Politica.Properties.Resources.Activos;
             this.btActivos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btActivos.Location = new System.Drawing.Point(0, 102);
-            this.btActivos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btActivos.Margin = new System.Windows.Forms.Padding(2);
             this.btActivos.Name = "btActivos";
             this.btActivos.Size = new System.Drawing.Size(182, 49);
             this.btActivos.TabIndex = 0;
@@ -456,7 +456,7 @@
             this.ClientSize = new System.Drawing.Size(1200, 610);
             this.Controls.Add(this.tabContenedorPrincipal);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "fmrMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Principal";
