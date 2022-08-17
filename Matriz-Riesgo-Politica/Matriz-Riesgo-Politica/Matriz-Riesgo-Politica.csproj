@@ -61,11 +61,23 @@
     <Compile Include="Activo.cs">
       <DependentUpon>DBConnection.tt</DependentUpon>
     </Compile>
+    <Compile Include="Activos\ModificarActivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Activos\ModificarActivo.Designer.cs">
+      <DependentUpon>ModificarActivo.cs</DependentUpon>
+    </Compile>
     <Compile Include="cabeceraAnalisisRiesgo.cs">
       <DependentUpon>DBConnection.tt</DependentUpon>
     </Compile>
     <Compile Include="categoriasAmenaza.cs">
       <DependentUpon>DBConnection.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Activos\CrearActivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Activos\CrearActivo.Designer.cs">
+      <DependentUpon>CrearActivo.cs</DependentUpon>
     </Compile>
     <Compile Include="DBConnection.Context.cs">
       <AutoGen>True</AutoGen>
@@ -102,6 +114,12 @@
     <Compile Include="sysdiagram.cs">
       <DependentUpon>DBConnection.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Activos\CrearActivo.resx">
+      <DependentUpon>CrearActivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Activos\ModificarActivo.resx">
+      <DependentUpon>ModificarActivo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>

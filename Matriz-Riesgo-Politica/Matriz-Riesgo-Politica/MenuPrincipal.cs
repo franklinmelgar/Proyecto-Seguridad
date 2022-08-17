@@ -52,5 +52,16 @@ namespace Matriz_Riesgo_Politica
         {
             tabContenedorPrincipal.SelectedTab = tabContenedorPrincipal.TabPages[3];
         }
+
+        private void btAgregarActivos_Click(object sender, EventArgs e)
+        {
+            CrearActivo crearActivo = new CrearActivo();
+            crearActivo.Show();
+        }
+
+        private void btModificarActivo_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
