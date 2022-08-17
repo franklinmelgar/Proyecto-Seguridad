@@ -379,7 +379,7 @@
             this.btImpacto.Name = "btImpacto";
             this.btImpacto.Size = new System.Drawing.Size(182, 49);
             this.btImpacto.TabIndex = 3;
-            this.btImpacto.Text = "Impactooo";
+            this.btImpacto.Text = "Impact";
             this.btImpacto.UseVisualStyleBackColor = false;
             this.btImpacto.Click += new System.EventHandler(this.btImpacto_Click);
             // 
