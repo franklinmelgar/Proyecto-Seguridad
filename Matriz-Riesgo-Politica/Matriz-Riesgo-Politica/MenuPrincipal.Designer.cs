@@ -30,9 +30,6 @@
         {
             this.tabContenedorPrincipal = new System.Windows.Forms.TabControl();
             this.tabActivos = new System.Windows.Forms.TabPage();
-            this.btEliminarActivo = new System.Windows.Forms.Button();
-            this.btModificarActivo = new System.Windows.Forms.Button();
-            this.btAgregarActivos = new System.Windows.Forms.Button();
             this.gridActivos = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.txtBuscarActivo = new System.Windows.Forms.TextBox();
@@ -40,10 +37,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.tabAmenazas = new System.Windows.Forms.TabPage();
-            this.btEliminarAmenaza = new System.Windows.Forms.Button();
-            this.btModificarAmenaza = new System.Windows.Forms.Button();
-            this.btAgregarAmenaza = new System.Windows.Forms.Button();
-            this.gridAmenzas = new System.Windows.Forms.DataGridView();
+            this.gridAmenazas = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.txtBuscarAmenaza = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -52,8 +46,14 @@
             this.tabPosibilidad = new System.Windows.Forms.TabPage();
             this.tabImpacto = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btEliminarActivo = new System.Windows.Forms.Button();
+            this.btModificarActivo = new System.Windows.Forms.Button();
+            this.btAgregarActivos = new System.Windows.Forms.Button();
+            this.btEliminarAmenaza = new System.Windows.Forms.Button();
+            this.btModificarAmenaza = new System.Windows.Forms.Button();
+            this.btAgregarAmenaza = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.btImpacto = new System.Windows.Forms.Button();
             this.btPosibilidad = new System.Windows.Forms.Button();
             this.btAmenazas = new System.Windows.Forms.Button();
@@ -62,7 +62,7 @@
             this.tabActivos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridActivos)).BeginInit();
             this.tabAmenazas.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridAmenzas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridAmenazas)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -102,41 +102,6 @@
             this.tabActivos.Size = new System.Drawing.Size(1018, 725);
             this.tabActivos.TabIndex = 0;
             this.tabActivos.Text = "Activos";
-            // 
-            // btEliminarActivo
-            // 
-            this.btEliminarActivo.Image = global::Matriz_Riesgo_Politica.Properties.Resources.delete;
-            this.btEliminarActivo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btEliminarActivo.Location = new System.Drawing.Point(742, 291);
-            this.btEliminarActivo.Name = "btEliminarActivo";
-            this.btEliminarActivo.Size = new System.Drawing.Size(259, 40);
-            this.btEliminarActivo.TabIndex = 12;
-            this.btEliminarActivo.Text = "Eliminar Activo";
-            this.btEliminarActivo.UseVisualStyleBackColor = true;
-            // 
-            // btModificarActivo
-            // 
-            this.btModificarActivo.Image = global::Matriz_Riesgo_Politica.Properties.Resources.edit;
-            this.btModificarActivo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btModificarActivo.Location = new System.Drawing.Point(742, 243);
-            this.btModificarActivo.Name = "btModificarActivo";
-            this.btModificarActivo.Size = new System.Drawing.Size(259, 40);
-            this.btModificarActivo.TabIndex = 11;
-            this.btModificarActivo.Text = "Modificar Activo";
-            this.btModificarActivo.UseVisualStyleBackColor = true;
-            this.btModificarActivo.Click += new System.EventHandler(this.btModificarActivo_Click);
-            // 
-            // btAgregarActivos
-            // 
-            this.btAgregarActivos.Image = global::Matriz_Riesgo_Politica.Properties.Resources.add;
-            this.btAgregarActivos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btAgregarActivos.Location = new System.Drawing.Point(742, 190);
-            this.btAgregarActivos.Name = "btAgregarActivos";
-            this.btAgregarActivos.Size = new System.Drawing.Size(259, 40);
-            this.btAgregarActivos.TabIndex = 10;
-            this.btAgregarActivos.Text = "Agregar nuevo activo";
-            this.btAgregarActivos.UseVisualStyleBackColor = true;
-            this.btAgregarActivos.Click += new System.EventHandler(this.btAgregarActivos_Click);
             // 
             // gridActivos
             // 
@@ -205,7 +170,7 @@
             this.tabAmenazas.Controls.Add(this.btEliminarAmenaza);
             this.tabAmenazas.Controls.Add(this.btModificarAmenaza);
             this.tabAmenazas.Controls.Add(this.btAgregarAmenaza);
-            this.tabAmenazas.Controls.Add(this.gridAmenzas);
+            this.tabAmenazas.Controls.Add(this.gridAmenazas);
             this.tabAmenazas.Controls.Add(this.label4);
             this.tabAmenazas.Controls.Add(this.txtBuscarAmenaza);
             this.tabAmenazas.Controls.Add(this.label5);
@@ -219,55 +184,22 @@
             this.tabAmenazas.TabIndex = 1;
             this.tabAmenazas.Text = "Amenzas";
             // 
-            // btEliminarAmenaza
+            // gridAmenazas
             // 
-            this.btEliminarAmenaza.Image = global::Matriz_Riesgo_Politica.Properties.Resources.delete;
-            this.btEliminarAmenaza.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btEliminarAmenaza.Location = new System.Drawing.Point(815, 319);
-            this.btEliminarAmenaza.Name = "btEliminarAmenaza";
-            this.btEliminarAmenaza.Size = new System.Drawing.Size(195, 40);
-            this.btEliminarAmenaza.TabIndex = 21;
-            this.btEliminarAmenaza.Text = "Eliminar Amenaza";
-            this.btEliminarAmenaza.UseVisualStyleBackColor = true;
-            // 
-            // btModificarAmenaza
-            // 
-            this.btModificarAmenaza.Image = global::Matriz_Riesgo_Politica.Properties.Resources.edit;
-            this.btModificarAmenaza.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btModificarAmenaza.Location = new System.Drawing.Point(815, 271);
-            this.btModificarAmenaza.Name = "btModificarAmenaza";
-            this.btModificarAmenaza.Size = new System.Drawing.Size(195, 40);
-            this.btModificarAmenaza.TabIndex = 20;
-            this.btModificarAmenaza.Text = "Modificar Amenaza";
-            this.btModificarAmenaza.UseVisualStyleBackColor = true;
-            // 
-            // btAgregarAmenaza
-            // 
-            this.btAgregarAmenaza.Image = global::Matriz_Riesgo_Politica.Properties.Resources.add;
-            this.btAgregarAmenaza.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btAgregarAmenaza.Location = new System.Drawing.Point(815, 218);
-            this.btAgregarAmenaza.Name = "btAgregarAmenaza";
-            this.btAgregarAmenaza.Size = new System.Drawing.Size(195, 40);
-            this.btAgregarAmenaza.TabIndex = 19;
-            this.btAgregarAmenaza.Text = "Agregar nueva amenaza";
-            this.btAgregarAmenaza.UseVisualStyleBackColor = true;
-            // 
-            // gridAmenzas
-            // 
-            this.gridAmenzas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gridAmenzas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridAmenzas.Location = new System.Drawing.Point(35, 206);
-            this.gridAmenzas.Name = "gridAmenzas";
-            this.gridAmenzas.ReadOnly = true;
-            this.gridAmenzas.RowHeadersWidth = 51;
-            this.gridAmenzas.RowTemplate.Height = 24;
-            this.gridAmenzas.Size = new System.Drawing.Size(764, 484);
-            this.gridAmenzas.TabIndex = 18;
+            this.gridAmenazas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridAmenazas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridAmenazas.Location = new System.Drawing.Point(24, 185);
+            this.gridAmenazas.Name = "gridAmenazas";
+            this.gridAmenazas.ReadOnly = true;
+            this.gridAmenazas.RowHeadersWidth = 51;
+            this.gridAmenazas.RowTemplate.Height = 24;
+            this.gridAmenazas.Size = new System.Drawing.Size(695, 393);
+            this.gridAmenazas.TabIndex = 18;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(32, 187);
+            this.label4.Location = new System.Drawing.Point(21, 166);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(107, 13);
             this.label4.TabIndex = 17;
@@ -275,15 +207,15 @@
             // 
             // txtBuscarAmenaza
             // 
-            this.txtBuscarAmenaza.Location = new System.Drawing.Point(35, 121);
+            this.txtBuscarAmenaza.Location = new System.Drawing.Point(25, 121);
             this.txtBuscarAmenaza.Name = "txtBuscarAmenaza";
-            this.txtBuscarAmenaza.Size = new System.Drawing.Size(927, 20);
+            this.txtBuscarAmenaza.Size = new System.Drawing.Size(694, 20);
             this.txtBuscarAmenaza.TabIndex = 16;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(32, 101);
+            this.label5.Location = new System.Drawing.Point(22, 101);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(87, 13);
             this.label5.TabIndex = 15;
@@ -313,7 +245,7 @@
             this.tabPosibilidad.Location = new System.Drawing.Point(4, 4);
             this.tabPosibilidad.Name = "tabPosibilidad";
             this.tabPosibilidad.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPosibilidad.Size = new System.Drawing.Size(1277, 725);
+            this.tabPosibilidad.Size = new System.Drawing.Size(1018, 725);
             this.tabPosibilidad.TabIndex = 2;
             this.tabPosibilidad.Text = "Posibilidad";
             // 
@@ -323,7 +255,7 @@
             this.tabImpacto.Location = new System.Drawing.Point(4, 4);
             this.tabImpacto.Name = "tabImpacto";
             this.tabImpacto.Padding = new System.Windows.Forms.Padding(3);
-            this.tabImpacto.Size = new System.Drawing.Size(1277, 725);
+            this.tabImpacto.Size = new System.Drawing.Size(1018, 725);
             this.tabImpacto.TabIndex = 3;
             this.tabImpacto.Text = "Impacto";
             // 
@@ -341,6 +273,86 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(242, 751);
             this.panel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.panel2.Location = new System.Drawing.Point(0, 91);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(241, 4);
+            this.panel2.TabIndex = 4;
+            // 
+            // btEliminarActivo
+            // 
+            this.btEliminarActivo.Image = global::Matriz_Riesgo_Politica.Properties.Resources.delete;
+            this.btEliminarActivo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btEliminarActivo.Location = new System.Drawing.Point(742, 291);
+            this.btEliminarActivo.Name = "btEliminarActivo";
+            this.btEliminarActivo.Size = new System.Drawing.Size(259, 40);
+            this.btEliminarActivo.TabIndex = 12;
+            this.btEliminarActivo.Text = "Eliminar Activo";
+            this.btEliminarActivo.UseVisualStyleBackColor = true;
+            this.btEliminarActivo.Click += new System.EventHandler(this.btEliminarActivo_Click);
+            // 
+            // btModificarActivo
+            // 
+            this.btModificarActivo.Image = global::Matriz_Riesgo_Politica.Properties.Resources.edit;
+            this.btModificarActivo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btModificarActivo.Location = new System.Drawing.Point(742, 243);
+            this.btModificarActivo.Name = "btModificarActivo";
+            this.btModificarActivo.Size = new System.Drawing.Size(259, 40);
+            this.btModificarActivo.TabIndex = 11;
+            this.btModificarActivo.Text = "Modificar Activo";
+            this.btModificarActivo.UseVisualStyleBackColor = true;
+            this.btModificarActivo.Click += new System.EventHandler(this.btModificarActivo_Click);
+            // 
+            // btAgregarActivos
+            // 
+            this.btAgregarActivos.Image = global::Matriz_Riesgo_Politica.Properties.Resources.add;
+            this.btAgregarActivos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btAgregarActivos.Location = new System.Drawing.Point(742, 190);
+            this.btAgregarActivos.Name = "btAgregarActivos";
+            this.btAgregarActivos.Size = new System.Drawing.Size(259, 40);
+            this.btAgregarActivos.TabIndex = 10;
+            this.btAgregarActivos.Text = "Agregar nuevo activo";
+            this.btAgregarActivos.UseVisualStyleBackColor = true;
+            this.btAgregarActivos.Click += new System.EventHandler(this.btAgregarActivos_Click);
+            // 
+            // btEliminarAmenaza
+            // 
+            this.btEliminarAmenaza.Image = global::Matriz_Riesgo_Politica.Properties.Resources.delete;
+            this.btEliminarAmenaza.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btEliminarAmenaza.Location = new System.Drawing.Point(740, 298);
+            this.btEliminarAmenaza.Name = "btEliminarAmenaza";
+            this.btEliminarAmenaza.Size = new System.Drawing.Size(259, 40);
+            this.btEliminarAmenaza.TabIndex = 21;
+            this.btEliminarAmenaza.Text = "Eliminar Amenaza";
+            this.btEliminarAmenaza.UseVisualStyleBackColor = true;
+            this.btEliminarAmenaza.Click += new System.EventHandler(this.btEliminarAmenaza_Click);
+            // 
+            // btModificarAmenaza
+            // 
+            this.btModificarAmenaza.Image = global::Matriz_Riesgo_Politica.Properties.Resources.edit;
+            this.btModificarAmenaza.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btModificarAmenaza.Location = new System.Drawing.Point(740, 250);
+            this.btModificarAmenaza.Name = "btModificarAmenaza";
+            this.btModificarAmenaza.Size = new System.Drawing.Size(259, 40);
+            this.btModificarAmenaza.TabIndex = 20;
+            this.btModificarAmenaza.Text = "Modificar Amenaza";
+            this.btModificarAmenaza.UseVisualStyleBackColor = true;
+            this.btModificarAmenaza.Click += new System.EventHandler(this.btModificarAmenaza_Click);
+            // 
+            // btAgregarAmenaza
+            // 
+            this.btAgregarAmenaza.Image = global::Matriz_Riesgo_Politica.Properties.Resources.add;
+            this.btAgregarAmenaza.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btAgregarAmenaza.Location = new System.Drawing.Point(740, 197);
+            this.btAgregarAmenaza.Name = "btAgregarAmenaza";
+            this.btAgregarAmenaza.Size = new System.Drawing.Size(259, 40);
+            this.btAgregarAmenaza.TabIndex = 19;
+            this.btAgregarAmenaza.Text = "Agregar nueva amenaza";
+            this.btAgregarAmenaza.UseVisualStyleBackColor = true;
+            this.btAgregarAmenaza.Click += new System.EventHandler(this.btAgregarAmenaza_Click);
             // 
             // button1
             // 
@@ -360,14 +372,6 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Matriz";
             this.button1.UseVisualStyleBackColor = false;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.panel2.Location = new System.Drawing.Point(0, 91);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(241, 4);
-            this.panel2.TabIndex = 4;
             // 
             // btImpacto
             // 
@@ -470,7 +474,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridActivos)).EndInit();
             this.tabAmenazas.ResumeLayout(false);
             this.tabAmenazas.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridAmenzas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridAmenazas)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -501,7 +505,7 @@
         private System.Windows.Forms.Button btEliminarAmenaza;
         private System.Windows.Forms.Button btModificarAmenaza;
         private System.Windows.Forms.Button btAgregarAmenaza;
-        private System.Windows.Forms.DataGridView gridAmenzas;
+        private System.Windows.Forms.DataGridView gridAmenazas;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtBuscarAmenaza;
         private System.Windows.Forms.Label label5;

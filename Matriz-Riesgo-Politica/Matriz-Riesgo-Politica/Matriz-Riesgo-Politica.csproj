@@ -61,11 +61,35 @@
     <Compile Include="Activo.cs">
       <DependentUpon>DBConnection.tt</DependentUpon>
     </Compile>
+    <Compile Include="Activos\EliminarActivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Activos\EliminarActivo.Designer.cs">
+      <DependentUpon>EliminarActivo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Activos\ModificarActivo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Activos\ModificarActivo.Designer.cs">
       <DependentUpon>ModificarActivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Amenazas\CrearAmenaza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Amenazas\CrearAmenaza.Designer.cs">
+      <DependentUpon>CrearAmenaza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Amenazas\EliminarAmenaza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Amenazas\EliminarAmenaza.Designer.cs">
+      <DependentUpon>EliminarAmenaza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Amenazas\ModificarAmenaza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Amenazas\ModificarAmenaza.Designer.cs">
+      <DependentUpon>ModificarAmenaza.cs</DependentUpon>
     </Compile>
     <Compile Include="cabeceraAnalisisRiesgo.cs">
       <DependentUpon>DBConnection.tt</DependentUpon>
@@ -117,8 +141,20 @@
     <EmbeddedResource Include="Activos\CrearActivo.resx">
       <DependentUpon>CrearActivo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Activos\EliminarActivo.resx">
+      <DependentUpon>EliminarActivo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Activos\ModificarActivo.resx">
       <DependentUpon>ModificarActivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Amenazas\CrearAmenaza.resx">
+      <DependentUpon>CrearAmenaza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Amenazas\EliminarAmenaza.resx">
+      <DependentUpon>EliminarAmenaza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Amenazas\ModificarAmenaza.resx">
+      <DependentUpon>ModificarAmenaza.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
@@ -177,5 +213,6 @@
     <None Include="Iconos\Amenazas.png" />
     <None Include="Iconos\Activos.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

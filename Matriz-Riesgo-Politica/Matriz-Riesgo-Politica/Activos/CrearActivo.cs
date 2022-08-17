@@ -28,7 +28,7 @@ namespace Matriz_Riesgo_Politica
             BD.Activos.Add(nuevoActivo);
             BD.SaveChanges();
 
-            MessageBox.Show("Activo Creado", "Informacion", MessageBoxButtons.OK);
+            MessageBox.Show("Activo Creado", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
 

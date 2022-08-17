@@ -10,19 +10,18 @@ using System.Windows.Forms;
 
 namespace Matriz_Riesgo_Politica.Activos
 {
-    public partial class ModificarActivo : Form
+    public partial class EliminarActivo : Form
     {
         public int CodigoActivo;
         Gestion_RiesgosEntities BD = new Gestion_RiesgosEntities();
 
-        public ModificarActivo()
+        public EliminarActivo()
         {
             InitializeComponent();
         }
 
-        private void ModificarActivo_Load(object sender, EventArgs e)
+        private void EliminarActivo_Load(object sender, EventArgs e)
         {
-
             if (CodigoActivo == null)
             {
                 this.Close();
@@ -33,20 +32,21 @@ namespace Matriz_Riesgo_Politica.Activos
 
                 txtNombreActivo.Text = activoEncontrado.nombreActivo;
                 txtCosto.Text = activoEncontrado.costoActivo.ToString();
-                txtNombreActivo.Focus();               
-                
-            }
+                txtNombreActivo.Focus();
 
+            }
         }
 
-        private void btCrear_Click(object sender, EventArgs e)
+        private void btEliminar_Click(object sender, EventArgs e)
         {
-            var activoEncontrado = BD.Activos.Where(a => a.codigoActivo.Equals(CodigoActivo)).FirstOrDefault();
-            activoEncontrado.nombreActivo = txtNombreActivo.Text;
-            activoEncontrado.costoActivo = decimal.Parse(txtCosto.Text);
-            BD.SaveChanges();
-            MessageBox.Show("Activo Actualizado", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Close();
+            if(MessageBox.Show("Esta seguro de eliminar el activo?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                var activoEncontrado = BD.Activos.Where(a => a.codigoActivo.Equals(CodigoActivo)).FirstOrDefault();
+                BD.Activos.Remove(activoEncontrado);
+                BD.SaveChanges();
+                MessageBox.Show("Activo Eliminado", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
         }
     }
 }

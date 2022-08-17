@@ -38,42 +38,46 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(44, 36);
+            this.label1.Location = new System.Drawing.Point(33, 29);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 16);
+            this.label1.Size = new System.Drawing.Size(77, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre Activo";
             // 
             // txtNombreActivo
             // 
-            this.txtNombreActivo.Location = new System.Drawing.Point(47, 55);
+            this.txtNombreActivo.Location = new System.Drawing.Point(35, 45);
+            this.txtNombreActivo.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombreActivo.Name = "txtNombreActivo";
-            this.txtNombreActivo.Size = new System.Drawing.Size(435, 22);
+            this.txtNombreActivo.Size = new System.Drawing.Size(327, 20);
             this.txtNombreActivo.TabIndex = 1;
             // 
             // txtCosto
             // 
-            this.txtCosto.Location = new System.Drawing.Point(47, 121);
+            this.txtCosto.Location = new System.Drawing.Point(35, 98);
+            this.txtCosto.Margin = new System.Windows.Forms.Padding(2);
             this.txtCosto.Name = "txtCosto";
-            this.txtCosto.Size = new System.Drawing.Size(435, 22);
+            this.txtCosto.Size = new System.Drawing.Size(327, 20);
             this.txtCosto.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(44, 102);
+            this.label2.Location = new System.Drawing.Point(33, 83);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 16);
+            this.label2.Size = new System.Drawing.Size(34, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Costo";
             // 
             // btCrear
             // 
-            this.btCrear.Image = global::Matriz_Riesgo_Politica.Properties.Resources.add;
             this.btCrear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btCrear.Location = new System.Drawing.Point(313, 165);
+            this.btCrear.Location = new System.Drawing.Point(235, 134);
+            this.btCrear.Margin = new System.Windows.Forms.Padding(2);
             this.btCrear.Name = "btCrear";
-            this.btCrear.Size = new System.Drawing.Size(169, 42);
+            this.btCrear.Size = new System.Drawing.Size(127, 33);
             this.btCrear.TabIndex = 4;
             this.btCrear.Text = "Crear Activo";
             this.btCrear.UseVisualStyleBackColor = true;
@@ -81,14 +85,15 @@
             // 
             // CrearActivo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(542, 219);
+            this.ClientSize = new System.Drawing.Size(406, 178);
             this.Controls.Add(this.btCrear);
             this.Controls.Add(this.txtCosto);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtNombreActivo);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CrearActivo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CrearActivo";
