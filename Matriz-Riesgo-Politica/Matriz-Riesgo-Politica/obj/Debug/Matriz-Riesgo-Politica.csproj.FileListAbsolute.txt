@@ -14,3 +14,5 @@ C:\Users\frank\OneDrive\Documents\Clases Ceutec\Proyectos desarrollo\Proyecto-Se
 C:\Users\frank\OneDrive\Documents\Clases Ceutec\Proyectos desarrollo\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz-Riesgo-Politica.csproj.CopyComplete
 C:\Users\frank\OneDrive\Documents\Clases Ceutec\Proyectos desarrollo\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz-Riesgo-Politica.csproj.AssemblyReference.cache
 C:\Users\frank\OneDrive\Documents\Clases Ceutec\Proyectos desarrollo\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz_Riesgo_Politica.fmrMenu.resources
+C:\Users\frank\OneDrive\Documents\Clases Ceutec\Proyectos desarrollo\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz_Riesgo_Politica.CrearActivo.resources
+C:\Users\frank\OneDrive\Documents\Clases Ceutec\Proyectos desarrollo\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz_Riesgo_Politica.Activos.ModificarActivo.resources
