@@ -1,5 +1,6 @@
 ﻿using Matriz_Riesgo_Politica.Activos;
 using Matriz_Riesgo_Politica.Amenazas;
+using Matriz_Riesgo_Politica.Matriz;
 using System;
 using System.Linq;
 using System.Windows.Forms;
@@ -12,6 +13,29 @@ namespace Matriz_Riesgo_Politica
         public fmrMenu()
         {
             InitializeComponent();
+        }
+
+        public void Parametros(string Amenaza, int posibilidad, int impacto)
+        {
+            evaluarParametros(Amenaza, posibilidad, impacto);
+        }
+
+        private void evaluarParametros(string Amenaza, int posibilidad, int impacto)
+        {
+            string nombreControl;
+
+            foreach (Control control in tableLayoutPanel1.Controls)
+            {
+                if (control is ListBox)
+                {
+                    nombreControl = control.Name;
+                    if (nombreControl.Equals("lst" + posibilidad.ToString() + impacto.ToString()))
+                    {                       
+                        ListBox lst = control as ListBox;
+                        lst.Items.Add(Amenaza);
+                    }
+                }
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -99,6 +123,18 @@ namespace Matriz_Riesgo_Politica
             EliminarAmenaza eliminarAmenaza = new EliminarAmenaza();
             eliminarAmenaza.CodigoAmenaza = codigoAmenaza;
             eliminarAmenaza.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {           
+            agregarAmenaza agregar = new agregarAmenaza();
+            AddOwnedForm(agregar);
+            agregar.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            tabContenedorPrincipal.SelectedTab = tabContenedorPrincipal.TabPages[4];
         }
     }
 }
