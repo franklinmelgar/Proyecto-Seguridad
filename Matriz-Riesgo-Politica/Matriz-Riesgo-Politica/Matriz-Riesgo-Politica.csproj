@@ -121,6 +121,12 @@
     <Compile Include="detalleAnalisisRiesgo.cs">
       <DependentUpon>DBConnection.tt</DependentUpon>
     </Compile>
+    <Compile Include="Matriz\agregarAmenaza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Matriz\agregarAmenaza.Designer.cs">
+      <DependentUpon>agregarAmenaza.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Amenazas\ModificarAmenaza.resx">
       <DependentUpon>ModificarAmenaza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Matriz\agregarAmenaza.resx">
+      <DependentUpon>agregarAmenaza.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
@@ -204,6 +213,7 @@
       <DependentUpon>DBConnection.edmx</DependentUpon>
       <LastGenOutput>DBConnection.cs</LastGenOutput>
     </Content>
+    <Content Include="Iconos\Matriz.png" />
     <None Include="Iconos\delete.png" />
     <None Include="Iconos\edit.png" />
     <None Include="Iconos\add.png" />
