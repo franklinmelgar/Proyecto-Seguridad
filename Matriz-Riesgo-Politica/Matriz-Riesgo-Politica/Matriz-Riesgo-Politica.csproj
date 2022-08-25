@@ -55,12 +55,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="accionRiesgo.cs">
-      <DependentUpon>DBConnection.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Activo.cs">
-      <DependentUpon>DBConnection.tt</DependentUpon>
-    </Compile>
     <Compile Include="Activos\EliminarActivo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,35 +85,11 @@
     <Compile Include="Amenazas\ModificarAmenaza.Designer.cs">
       <DependentUpon>ModificarAmenaza.cs</DependentUpon>
     </Compile>
-    <Compile Include="cabeceraAnalisisRiesgo.cs">
-      <DependentUpon>DBConnection.tt</DependentUpon>
-    </Compile>
-    <Compile Include="categoriasAmenaza.cs">
-      <DependentUpon>DBConnection.tt</DependentUpon>
-    </Compile>
     <Compile Include="Activos\CrearActivo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Activos\CrearActivo.Designer.cs">
       <DependentUpon>CrearActivo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DBConnection.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DBConnection.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DBConnection.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DBConnection.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DBConnection.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DBConnection.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="detalleAnalisisRiesgo.cs">
-      <DependentUpon>DBConnection.tt</DependentUpon>
     </Compile>
     <Compile Include="Matriz\agregarAmenaza.cs">
       <SubType>Form</SubType>
@@ -133,17 +103,8 @@
     <Compile Include="MenuPrincipal.Designer.cs">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="impactoRiesgo.cs">
-      <DependentUpon>DBConnection.tt</DependentUpon>
-    </Compile>
-    <Compile Include="posibilidadRiesgo.cs">
-      <DependentUpon>DBConnection.tt</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="sysdiagram.cs">
-      <DependentUpon>DBConnection.tt</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Activos\CrearActivo.resx">
       <DependentUpon>CrearActivo.cs</DependentUpon>
     </EmbeddedResource>
@@ -178,13 +139,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EntityDeploy Include="DBConnection.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DBConnection.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="DBConnection.edmx.diagram">
-      <DependentUpon>DBConnection.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -203,16 +157,6 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DBConnection.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DBConnection.edmx</DependentUpon>
-      <LastGenOutput>DBConnection.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="DBConnection.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DBConnection.edmx</DependentUpon>
-      <LastGenOutput>DBConnection.cs</LastGenOutput>
-    </Content>
     <Content Include="Iconos\Matriz.png" />
     <None Include="Iconos\delete.png" />
     <None Include="Iconos\edit.png" />
