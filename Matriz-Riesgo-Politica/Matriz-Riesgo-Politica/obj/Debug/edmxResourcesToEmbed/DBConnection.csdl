@@ -83,16 +83,6 @@
     <NavigationProperty Name="accionRiesgoes" Relationship="Self.FK_AccionRiesgo_posibilidadRiesgo" FromRole="posibilidadRiesgo" ToRole="accionRiesgo" />
     <NavigationProperty Name="detalleAnalisisRiesgoes" Relationship="Self.FK_detalleAnalisisRiesgo_posibilidadRiesgo" FromRole="posibilidadRiesgo" ToRole="detalleAnalisisRiesgo" />
   </EntityType>
-  <EntityType Name="sysdiagram">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-  </EntityType>
   <Association Name="FK_AccionRiesgo_impactoRiesgo">
     <End Role="impactoRiesgo" Type="Self.impactoRiesgo" Multiplicity="1" />
     <End Role="accionRiesgo" Type="Self.accionRiesgo" Multiplicity="*" />
@@ -197,7 +187,6 @@
     <EntitySet Name="detalleAnalisisRiesgoes" EntityType="Self.detalleAnalisisRiesgo" />
     <EntitySet Name="impactoRiesgoes" EntityType="Self.impactoRiesgo" />
     <EntitySet Name="posibilidadRiesgoes" EntityType="Self.posibilidadRiesgo" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
     <AssociationSet Name="FK_AccionRiesgo_impactoRiesgo" Association="Self.FK_AccionRiesgo_impactoRiesgo">
       <End Role="impactoRiesgo" EntitySet="impactoRiesgoes" />
       <End Role="accionRiesgo" EntitySet="accionRiesgoes" />

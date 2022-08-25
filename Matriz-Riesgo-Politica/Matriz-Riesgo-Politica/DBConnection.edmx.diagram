@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="19a89e1320db40ceb2d930e81576b0e7" Name="Diagram1">
+        <EntityTypeShape EntityType="Gestion_RiesgosModel.accionRiesgo" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Gestion_RiesgosModel.Activo" Width="1.5" PointX="0.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="Gestion_RiesgosModel.cabeceraAnalisisRiesgo" Width="1.5" PointX="3" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Gestion_RiesgosModel.categoriasAmenaza" Width="1.5" PointX="3" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Gestion_RiesgosModel.detalleAnalisisRiesgo" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Gestion_RiesgosModel.impactoRiesgo" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Gestion_RiesgosModel.posibilidadRiesgo" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
+        <AssociationConnector Association="Gestion_RiesgosModel.FK_AccionRiesgo_impactoRiesgo" ManuallyRouted="false" />
+        <AssociationConnector Association="Gestion_RiesgosModel.FK_AccionRiesgo_posibilidadRiesgo" ManuallyRouted="false" />
+        <AssociationConnector Association="Gestion_RiesgosModel.FK_detalleAnalisisRiesgo_AccionRiesgo" ManuallyRouted="false" />
+        <AssociationConnector Association="Gestion_RiesgosModel.FK_cabeceraAnalisisRiesgo_Activos" ManuallyRouted="false" />
+        <AssociationConnector Association="Gestion_RiesgosModel.FK_detalleAnalisisRiesgo_cabeceraAnalisisRiesgo" ManuallyRouted="false" />
+        <AssociationConnector Association="Gestion_RiesgosModel.FK_detalleAnalisisRiesgo_categoriasAmenazas" ManuallyRouted="false" />
+        <AssociationConnector Association="Gestion_RiesgosModel.FK_detalleAnalisisRiesgo_impactoRiesgo" ManuallyRouted="false" />
+        <AssociationConnector Association="Gestion_RiesgosModel.FK_detalleAnalisisRiesgo_posibilidadRiesgo" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
