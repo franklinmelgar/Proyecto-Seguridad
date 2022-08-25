@@ -1,5 +1,6 @@
 ﻿using Matriz_Riesgo_Politica.Activos;
 using Matriz_Riesgo_Politica.Amenazas;
+using Matriz_Riesgo_Politica.Impacto;
 using Matriz_Riesgo_Politica.Matriz;
 using System;
 using System.Linq;
@@ -77,7 +78,14 @@ namespace Matriz_Riesgo_Politica
 
         private void btImpacto_Click(object sender, EventArgs e)
         {
+            obtenerImpacto();
             tabContenedorPrincipal.SelectedTab = tabContenedorPrincipal.TabPages[3];
+        }
+
+        private void obtenerImpacto()
+        {
+            var impactos = DB.impactoRiesgoes.ToList();
+            impactGrid.DataSource = impactos;
         }
 
         private void btAgregarActivos_Click(object sender, EventArgs e)
@@ -135,6 +143,17 @@ namespace Matriz_Riesgo_Politica
         private void button1_Click(object sender, EventArgs e)
         {
             tabContenedorPrincipal.SelectedTab = tabContenedorPrincipal.TabPages[4];
+        }
+
+        private void gridActivos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            CrearImpacto crearImpacto = new CrearImpacto();
+            crearImpacto.Show();
         }
     }
 }

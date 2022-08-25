@@ -44,3 +44,4 @@ C:\Projects\Seguridad\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Po
 C:\Projects\Seguridad\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz-Riesgo-Politica.csproj.CopyComplete
 C:\Projects\Seguridad\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz-Riesgo-Politica.exe
 C:\Projects\Seguridad\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz-Riesgo-Politica.pdb
+C:\Projects\Seguridad\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz_Riesgo_Politica.Impacto.CrearImpacto.resources

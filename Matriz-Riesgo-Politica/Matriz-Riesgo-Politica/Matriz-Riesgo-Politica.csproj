@@ -124,6 +124,24 @@
     <Compile Include="impactoRiesgo.cs">
       <DependentUpon>DBConnection.tt</DependentUpon>
     </Compile>
+    <Compile Include="Impacto\CrearImpacto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Impacto\CrearImpacto.Designer.cs">
+      <DependentUpon>CrearImpacto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Impacto\EliminarImpacto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Impacto\EliminarImpacto.Designer.cs">
+      <DependentUpon>EliminarImpacto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Impacto\ModificarImpacto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Impacto\ModificarImpacto.Designer.cs">
+      <DependentUpon>ModificarImpacto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Matriz\agregarAmenaza.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Amenazas\ModificarAmenaza.resx">
       <DependentUpon>ModificarAmenaza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Impacto\CrearImpacto.resx">
+      <DependentUpon>CrearImpacto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Matriz\agregarAmenaza.resx">
       <DependentUpon>agregarAmenaza.cs</DependentUpon>
@@ -220,6 +241,8 @@
     <None Include="Iconos\Amenazas.png" />
     <None Include="Iconos\Activos.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Posibilidad\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
