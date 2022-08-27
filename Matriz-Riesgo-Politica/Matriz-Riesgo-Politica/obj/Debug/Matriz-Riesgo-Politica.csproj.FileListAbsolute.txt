@@ -45,3 +45,27 @@ C:\Projects\Seguridad\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Po
 C:\Projects\Seguridad\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz-Riesgo-Politica.exe
 C:\Projects\Seguridad\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz-Riesgo-Politica.pdb
 C:\Projects\Seguridad\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz_Riesgo_Politica.Impacto.CrearImpacto.resources
+C:\Users\Jenny Godoy\Documents\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\bin\Debug\Matriz-Riesgo-Politica.exe.config
+C:\Users\Jenny Godoy\Documents\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\bin\Debug\Matriz-Riesgo-Politica.exe
+C:\Users\Jenny Godoy\Documents\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\bin\Debug\Matriz-Riesgo-Politica.pdb
+C:\Users\Jenny Godoy\Documents\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\bin\Debug\EntityFramework.dll
+C:\Users\Jenny Godoy\Documents\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Jenny Godoy\Documents\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\bin\Debug\EntityFramework.xml
+C:\Users\Jenny Godoy\Documents\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Jenny Godoy\Documents\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz-Riesgo-Politica.csproj.AssemblyReference.cache
+C:\Users\Jenny Godoy\Documents\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz-Riesgo-Politica.csproj.SuggestedBindingRedirects.cache
+C:\Users\Jenny Godoy\Documents\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz_Riesgo_Politica.CrearActivo.resources
+C:\Users\Jenny Godoy\Documents\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz_Riesgo_Politica.Activos.EliminarActivo.resources
+C:\Users\Jenny Godoy\Documents\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz_Riesgo_Politica.Activos.ModificarActivo.resources
+C:\Users\Jenny Godoy\Documents\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz_Riesgo_Politica.Amenazas.CrearAmenaza.resources
+C:\Users\Jenny Godoy\Documents\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz_Riesgo_Politica.Amenazas.EliminarAmenaza.resources
+C:\Users\Jenny Godoy\Documents\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz_Riesgo_Politica.Amenazas.ModificarAmenaza.resources
+C:\Users\Jenny Godoy\Documents\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz_Riesgo_Politica.Impacto.CrearImpacto.resources
+C:\Users\Jenny Godoy\Documents\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz_Riesgo_Politica.Matriz.agregarAmenaza.resources
+C:\Users\Jenny Godoy\Documents\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz_Riesgo_Politica.fmrMenu.resources
+C:\Users\Jenny Godoy\Documents\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz_Riesgo_Politica.Properties.Resources.resources
+C:\Users\Jenny Godoy\Documents\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz-Riesgo-Politica.csproj.GenerateResource.cache
+C:\Users\Jenny Godoy\Documents\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz-Riesgo-Politica.csproj.CoreCompileInputs.cache
+C:\Users\Jenny Godoy\Documents\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz-Riesgo-Politica.csproj.CopyComplete
+C:\Users\Jenny Godoy\Documents\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz-Riesgo-Politica.exe
+C:\Users\Jenny Godoy\Documents\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz-Riesgo-Politica.pdb

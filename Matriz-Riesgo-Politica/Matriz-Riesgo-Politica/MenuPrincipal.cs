@@ -155,5 +155,30 @@ namespace Matriz_Riesgo_Politica
             CrearImpacto crearImpacto = new CrearImpacto();
             crearImpacto.Show();
         }
+
+        private void tabPosibilidad_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabAmenazas_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
