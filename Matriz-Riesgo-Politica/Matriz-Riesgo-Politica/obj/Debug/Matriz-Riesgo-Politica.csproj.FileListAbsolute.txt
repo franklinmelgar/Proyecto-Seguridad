@@ -69,3 +69,6 @@ C:\Users\Jenny Godoy\Documents\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\
 C:\Users\Jenny Godoy\Documents\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz-Riesgo-Politica.csproj.CopyComplete
 C:\Users\Jenny Godoy\Documents\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz-Riesgo-Politica.exe
 C:\Users\Jenny Godoy\Documents\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz-Riesgo-Politica.pdb
+C:\Users\frank\OneDrive\Documents\Clases Ceutec\Proyectos desarrollo\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz_Riesgo_Politica.Impacto.CrearImpacto.resources
+C:\Users\frank\OneDrive\Documents\Clases Ceutec\Proyectos desarrollo\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz_Riesgo_Politica.Matriz.matriz.resources
+C:\Users\frank\OneDrive\Documents\Clases Ceutec\Proyectos desarrollo\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz_Riesgo_Politica.Matriz.AgregarMatriz.resources

@@ -16,29 +16,6 @@ namespace Matriz_Riesgo_Politica
             InitializeComponent();
         }
 
-        public void Parametros(string Amenaza, int posibilidad, int impacto)
-        {
-            evaluarParametros(Amenaza, posibilidad, impacto);
-        }
-
-        private void evaluarParametros(string Amenaza, int posibilidad, int impacto)
-        {
-            string nombreControl;
-
-            foreach (Control control in tableLayoutPanel1.Controls)
-            {
-                if (control is ListBox)
-                {
-                    nombreControl = control.Name;
-                    if (nombreControl.Equals("lst" + posibilidad.ToString() + impacto.ToString()))
-                    {                       
-                        ListBox lst = control as ListBox;
-                        lst.Items.Add(Amenaza);
-                    }
-                }
-            }
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
         
@@ -47,14 +24,24 @@ namespace Matriz_Riesgo_Politica
 
         private void obtenerActivos()
         {            
-            var activos = DB.Activos.ToList();
+            var activos = DB.Activos.Select(c => new
+            {
+                c.codigoActivo,
+                c.nombreActivo,
+                c.costoActivo
+            }).ToList();
             gridActivos.DataSource = activos;       
 
         }
 
         private void obtenerAmenazas()
         {
-            var amenazas = DB.categoriasAmenazas.ToList();
+            var amenazas = DB.categoriasAmenazas.Select(c => new
+            {
+                c.codigoCategoria,
+                c.nombreCategoriaRiesgo,
+                c.descripcionCategoriaRiesgo
+            }).ToList();
             gridAmenazas.DataSource = amenazas;
 
         }
@@ -84,8 +71,26 @@ namespace Matriz_Riesgo_Politica
 
         private void obtenerImpacto()
         {
-            var impactos = DB.impactoRiesgoes.ToList();
+            var impactos = DB.impactoRiesgoes.Select(c => new
+            {
+                c.codigoImpacto,
+                c.nivelImpacto,
+                c.puntajeImpacto
+            }).ToList();
             impactGrid.DataSource = impactos;
+        }
+
+        private void obtenerMatrices()
+        {
+            var cabecera = DB.cabeceraAnalisisRiesgoes.Select(c => new
+            {
+                c.codigoAnalisisRiesgo,
+                c.descripcionAnalisisRiesgo,
+                c.fechaCreacion,
+                c.nombreAuditor
+            }).ToList();
+                
+            grdMatrices.DataSource = cabecera;
         }
 
         private void btAgregarActivos_Click(object sender, EventArgs e)
@@ -133,15 +138,9 @@ namespace Matriz_Riesgo_Politica
             eliminarAmenaza.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {           
-            agregarAmenaza agregar = new agregarAmenaza();
-            AddOwnedForm(agregar);
-            agregar.Show();
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
+            obtenerMatrices();
             tabContenedorPrincipal.SelectedTab = tabContenedorPrincipal.TabPages[4];
         }
 
@@ -156,29 +155,18 @@ namespace Matriz_Riesgo_Politica
             crearImpacto.Show();
         }
 
-        private void tabPosibilidad_Click(object sender, EventArgs e)
+        private void btAgregarMatriz_Click(object sender, EventArgs e)
         {
-
+            AgregarMatriz agregar = new AgregarMatriz();
+            agregar.Show();
         }
 
-        private void label6_Click(object sender, EventArgs e)
+        private void grdMatrices_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-
-        }
-
-        private void tabAmenazas_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label18_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label19_Click(object sender, EventArgs e)
-        {
-
+            string codigoMatriz = grdMatrices.Rows[e.RowIndex].Cells[0].Value.ToString();
+            matriz mtr = new matriz();
+            mtr.codigoMatriz = codigoMatriz;
+            mtr.Show();
         }
     }
 }

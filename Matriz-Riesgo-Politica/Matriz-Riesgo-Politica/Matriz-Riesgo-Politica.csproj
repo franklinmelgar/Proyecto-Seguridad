@@ -148,6 +148,18 @@
     <Compile Include="Matriz\agregarAmenaza.Designer.cs">
       <DependentUpon>agregarAmenaza.cs</DependentUpon>
     </Compile>
+    <Compile Include="Matriz\AgregarMatriz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Matriz\AgregarMatriz.Designer.cs">
+      <DependentUpon>AgregarMatriz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Matriz\matriz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Matriz\matriz.Designer.cs">
+      <DependentUpon>matriz.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +194,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Matriz\agregarAmenaza.resx">
       <DependentUpon>agregarAmenaza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Matriz\AgregarMatriz.resx">
+      <DependentUpon>AgregarMatriz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Matriz\matriz.resx">
+      <DependentUpon>matriz.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>

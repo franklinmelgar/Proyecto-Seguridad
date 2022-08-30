@@ -62,14 +62,14 @@ namespace Matriz_Riesgo_Politica.Matriz
 
         private void btAgregar_Click(object sender, EventArgs e)
         {
-            fmrMenu frmMenu = Owner as fmrMenu;
-            
-            if (frmMenu != null)
+            matriz frmMatriz = Owner as matriz;
+
+            if (frmMatriz != null)
             {
                 amenaza = cmbAmenaza.SelectedValue.ToString();
                 posibilidad = int.Parse(cmbPosibilidad.SelectedValue.ToString());
                 impacto = int.Parse(cmbImpacto.SelectedValue.ToString());
-                frmMenu.Parametros(amenaza, posibilidad, impacto);
+                frmMatriz.Parametros(amenaza, posibilidad, impacto);
                 this.Close();
             }
         }
