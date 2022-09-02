@@ -168,5 +168,10 @@ namespace Matriz_Riesgo_Politica
             mtr.codigoMatriz = codigoMatriz;
             mtr.Show();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

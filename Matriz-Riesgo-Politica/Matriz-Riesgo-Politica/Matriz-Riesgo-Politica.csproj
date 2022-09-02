@@ -169,6 +169,24 @@
     <Compile Include="posibilidadRiesgo.cs">
       <DependentUpon>DBConnection.tt</DependentUpon>
     </Compile>
+    <Compile Include="Probabilidad\crearprobabilidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Probabilidad\crearprobabilidad.Designer.cs">
+      <DependentUpon>crearprobabilidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Probabilidad\modificarprobabilidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Probabilidad\modificarprobabilidad.Designer.cs">
+      <DependentUpon>modificarprobabilidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Probabilidad\eliminarpropabilidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Probabilidad\eliminarpropabilidad.Designer.cs">
+      <DependentUpon>eliminarpropabilidad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Activos\CrearActivo.resx">
@@ -203,6 +221,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Probabilidad\crearprobabilidad.resx">
+      <DependentUpon>crearprobabilidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Probabilidad\eliminarpropabilidad.resx">
+      <DependentUpon>eliminarpropabilidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Probabilidad\modificarprobabilidad.resx">
+      <DependentUpon>modificarprobabilidad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
