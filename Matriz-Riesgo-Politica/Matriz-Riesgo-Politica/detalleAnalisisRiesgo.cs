@@ -23,9 +23,9 @@ namespace Matriz_Riesgo_Politica
         public Nullable<int> codigoAccion { get; set; }
     
         public virtual accionRiesgo accionRiesgo { get; set; }
-        public virtual cabeceraAnalisisRiesgo cabeceraAnalisisRiesgo { get; set; }
         public virtual categoriasAmenaza categoriasAmenaza { get; set; }
         public virtual impactoRiesgo impactoRiesgo { get; set; }
         public virtual posibilidadRiesgo posibilidadRiesgo { get; set; }
+        public virtual cabeceraAnalisisRiesgo cabeceraAnalisisRiesgo { get; set; }
     }
 }

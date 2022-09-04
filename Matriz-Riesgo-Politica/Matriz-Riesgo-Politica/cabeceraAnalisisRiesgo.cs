@@ -21,10 +21,13 @@ namespace Matriz_Riesgo_Politica
         }
     
         public int codigoAnalisisRiesgo { get; set; }
-        public string descripcionAnalisisRiesgo { get; set; }
         public Nullable<System.DateTime> fechaCreacion { get; set; }
         public string nombreAuditor { get; set; }
+        public string nombreAprobador { get; set; }
+        public string nivelConfidencialidad { get; set; }
         public Nullable<int> codigoActivo { get; set; }
+        public string objetivosAnalisisRiesgo { get; set; }
+        public string alcanceAnalisisRiesgo { get; set; }
     
         public virtual Activo Activo { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

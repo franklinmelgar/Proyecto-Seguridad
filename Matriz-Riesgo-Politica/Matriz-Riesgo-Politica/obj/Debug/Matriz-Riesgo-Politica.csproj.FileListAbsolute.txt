@@ -77,3 +77,9 @@ C:\Users\Jenny Godoy\Documents\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\
 C:\Users\Jenny Godoy\Documents\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz_Riesgo_Politica.Probabilidad.crearprobabilidad.resources
 C:\Users\Jenny Godoy\Documents\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz_Riesgo_Politica.Probabilidad.eliminarpropabilidad.resources
 C:\Users\Jenny Godoy\Documents\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz_Riesgo_Politica.Probabilidad.modificarprobabilidad.resources
+C:\Users\frank\OneDrive\Documents\Clases Ceutec\Proyectos desarrollo\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz_Riesgo_Politica.Probabilidad.crearprobabilidad.resources
+C:\Users\frank\OneDrive\Documents\Clases Ceutec\Proyectos desarrollo\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz_Riesgo_Politica.Probabilidad.eliminarpropabilidad.resources
+C:\Users\frank\OneDrive\Documents\Clases Ceutec\Proyectos desarrollo\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz_Riesgo_Politica.Probabilidad.modificarprobabilidad.resources
+C:\Users\frank\OneDrive\Documents\Clases Ceutec\Proyectos desarrollo\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\frank\OneDrive\Documents\Clases Ceutec\Proyectos desarrollo\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\bin\Debug\itextsharp.dll
+C:\Users\frank\OneDrive\Documents\Clases Ceutec\Proyectos desarrollo\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\bin\Debug\itextsharp.xml

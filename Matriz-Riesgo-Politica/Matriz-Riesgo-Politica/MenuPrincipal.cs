@@ -23,7 +23,7 @@ namespace Matriz_Riesgo_Politica
         }
 
         private void obtenerActivos()
-        {            
+        {
             var activos = DB.Activos.Select(c => new
             {
                 c.codigoActivo,
@@ -85,11 +85,10 @@ namespace Matriz_Riesgo_Politica
             var cabecera = DB.cabeceraAnalisisRiesgoes.Select(c => new
             {
                 c.codigoAnalisisRiesgo,
-                c.descripcionAnalisisRiesgo,
                 c.fechaCreacion,
                 c.nombreAuditor
             }).ToList();
-                
+
             grdMatrices.DataSource = cabecera;
         }
 

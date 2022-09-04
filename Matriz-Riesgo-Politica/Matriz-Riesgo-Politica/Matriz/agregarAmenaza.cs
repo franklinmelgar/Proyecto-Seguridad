@@ -17,6 +17,7 @@ namespace Matriz_Riesgo_Politica.Matriz
         private string amenaza;
         private int posibilidad;
         private int impacto;
+        private string codigo;
 
         public agregarAmenaza()
         {
@@ -37,7 +38,7 @@ namespace Matriz_Riesgo_Politica.Matriz
 
             cmbAmenaza.DataSource = listadoAmenazas;
             cmbAmenaza.DisplayMember = "nombreCategoriaRiesgo";
-            cmbAmenaza.ValueMember = "nombreCategoriaRiesgo";
+            cmbAmenaza.ValueMember = "codigoCategoria";
         }
 
         private void obtenerPosibilidad()
@@ -66,10 +67,11 @@ namespace Matriz_Riesgo_Politica.Matriz
 
             if (frmMatriz != null)
             {
-                amenaza = cmbAmenaza.SelectedValue.ToString();
+                codigo = cmbAmenaza.SelectedValue.ToString();
+                amenaza = cmbAmenaza.Text;
                 posibilidad = int.Parse(cmbPosibilidad.SelectedValue.ToString());
                 impacto = int.Parse(cmbImpacto.SelectedValue.ToString());
-                frmMatriz.Parametros(amenaza, posibilidad, impacto);
+                frmMatriz.Parametros(codigo, amenaza, posibilidad, impacto);
                 this.Close();
             }
         }
