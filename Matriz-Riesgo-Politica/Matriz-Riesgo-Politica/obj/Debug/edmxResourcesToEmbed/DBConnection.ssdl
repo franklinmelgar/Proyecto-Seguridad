@@ -7,6 +7,8 @@
     <Property Name="codigoAccion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="codigoPosibilidad" Type="int" Nullable="false" />
     <Property Name="codigoImpacto" Type="int" Nullable="false" />
+    <Property Name="nivelRiesgoMinimo" Type="int" />
+    <Property Name="nivelRiesgoMayor" Type="int" />
     <Property Name="descripcionAccion" Type="varchar(max)" />
   </EntityType>
   <EntityType Name="Activos">
@@ -22,10 +24,13 @@
       <PropertyRef Name="codigoAnalisisRiesgo" />
     </Key>
     <Property Name="codigoAnalisisRiesgo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="descripcionAnalisisRiesgo" Type="varchar" MaxLength="50" />
     <Property Name="fechaCreacion" Type="datetime" />
     <Property Name="nombreAuditor" Type="varchar" MaxLength="50" />
+    <Property Name="nombreAprobador" Type="varchar" MaxLength="50" />
+    <Property Name="nivelConfidencialidad" Type="varchar" MaxLength="50" />
     <Property Name="codigoActivo" Type="int" />
+    <Property Name="objetivosAnalisisRiesgo" Type="varchar(max)" />
+    <Property Name="alcanceAnalisisRiesgo" Type="varchar(max)" />
   </EntityType>
   <EntityType Name="categoriasAmenazas">
     <Key>
@@ -49,6 +54,14 @@
     <Property Name="nombreRiesgo" Type="varchar" MaxLength="50" />
     <Property Name="codigoAccion" Type="int" />
   </EntityType>
+  <EntityType Name="enunciadoPoliticaAmenaza">
+    <Key>
+      <PropertyRef Name="codigoEnunciadoPolitica" />
+    </Key>
+    <Property Name="codigoEnunciadoPolitica" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codigoCategoria" Type="int" Nullable="false" />
+    <Property Name="descripcionEnunciado" Type="varchar(max)" />
+  </EntityType>
   <EntityType Name="impactoRiesgo">
     <Key>
       <PropertyRef Name="codigoImpacto" />
@@ -62,10 +75,28 @@
     <Key>
       <PropertyRef Name="codigoPosibilidad" />
     </Key>
-    <Property Name="codigoPosibilidad" Type="int" Nullable="false" />
+    <Property Name="codigoPosibilidad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="nivelPosibilidad" Type="varchar" MaxLength="50" />
     <Property Name="puntajePosibilidad" Type="int" />
     <Property Name="descripcionPosibilidad" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="seccionPoliticaAmenaza">
+    <Key>
+      <PropertyRef Name="codigoSeccionPolitica" />
+    </Key>
+    <Property Name="codigoSeccionPolitica" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codigoEnunciadoPolitica" Type="int" />
+    <Property Name="descripcionSeccion" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
   <Association Name="FK_AccionRiesgo_impactoRiesgo">
     <End Role="impactoRiesgo" Type="Self.impactoRiesgo" Multiplicity="1" />
@@ -163,14 +194,41 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_enunciadoPoliticaAmenaza_categoriasAmenazas">
+    <End Role="categoriasAmenazas" Type="Self.categoriasAmenazas" Multiplicity="1" />
+    <End Role="enunciadoPoliticaAmenaza" Type="Self.enunciadoPoliticaAmenaza" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="categoriasAmenazas">
+        <PropertyRef Name="codigoCategoria" />
+      </Principal>
+      <Dependent Role="enunciadoPoliticaAmenaza">
+        <PropertyRef Name="codigoCategoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_seccionPoliticaAmenaza_enunciadoPoliticaAmenaza">
+    <End Role="enunciadoPoliticaAmenaza" Type="Self.enunciadoPoliticaAmenaza" Multiplicity="0..1" />
+    <End Role="seccionPoliticaAmenaza" Type="Self.seccionPoliticaAmenaza" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="enunciadoPoliticaAmenaza">
+        <PropertyRef Name="codigoEnunciadoPolitica" />
+      </Principal>
+      <Dependent Role="seccionPoliticaAmenaza">
+        <PropertyRef Name="codigoEnunciadoPolitica" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="Gestion_RiesgosModelStoreContainer">
     <EntitySet Name="accionRiesgo" EntityType="Self.accionRiesgo" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Activos" EntityType="Self.Activos" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="cabeceraAnalisisRiesgo" EntityType="Self.cabeceraAnalisisRiesgo" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="categoriasAmenazas" EntityType="Self.categoriasAmenazas" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="detalleAnalisisRiesgo" EntityType="Self.detalleAnalisisRiesgo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="enunciadoPoliticaAmenaza" EntityType="Self.enunciadoPoliticaAmenaza" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="impactoRiesgo" EntityType="Self.impactoRiesgo" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="posibilidadRiesgo" EntityType="Self.posibilidadRiesgo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="seccionPoliticaAmenaza" EntityType="Self.seccionPoliticaAmenaza" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_AccionRiesgo_impactoRiesgo" Association="Self.FK_AccionRiesgo_impactoRiesgo">
       <End Role="impactoRiesgo" EntitySet="impactoRiesgo" />
       <End Role="accionRiesgo" EntitySet="accionRiesgo" />
@@ -202,6 +260,14 @@
     <AssociationSet Name="FK_detalleAnalisisRiesgo_posibilidadRiesgo" Association="Self.FK_detalleAnalisisRiesgo_posibilidadRiesgo">
       <End Role="posibilidadRiesgo" EntitySet="posibilidadRiesgo" />
       <End Role="detalleAnalisisRiesgo" EntitySet="detalleAnalisisRiesgo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_enunciadoPoliticaAmenaza_categoriasAmenazas" Association="Self.FK_enunciadoPoliticaAmenaza_categoriasAmenazas">
+      <End Role="categoriasAmenazas" EntitySet="categoriasAmenazas" />
+      <End Role="enunciadoPoliticaAmenaza" EntitySet="enunciadoPoliticaAmenaza" />
+    </AssociationSet>
+    <AssociationSet Name="FK_seccionPoliticaAmenaza_enunciadoPoliticaAmenaza" Association="Self.FK_seccionPoliticaAmenaza_enunciadoPoliticaAmenaza">
+      <End Role="enunciadoPoliticaAmenaza" EntitySet="enunciadoPoliticaAmenaza" />
+      <End Role="seccionPoliticaAmenaza" EntitySet="seccionPoliticaAmenaza" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

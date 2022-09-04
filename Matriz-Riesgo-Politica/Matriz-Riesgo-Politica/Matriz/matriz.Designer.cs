@@ -56,7 +56,10 @@
             this.lst14 = new System.Windows.Forms.ListBox();
             this.lst13 = new System.Windows.Forms.ListBox();
             this.lst12 = new System.Windows.Forms.ListBox();
+            this.btImprimirPoliticas = new System.Windows.Forms.Button();
             this.btAgregarAmenaza = new System.Windows.Forms.Button();
+            this.btImprimirMatriz = new System.Windows.Forms.Button();
+            this.saveFileDialogPoliticas = new System.Windows.Forms.SaveFileDialog();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -64,6 +67,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btImprimirMatriz);
+            this.panel1.Controls.Add(this.btImprimirPoliticas);
             this.panel1.Controls.Add(this.btAgregarAmenaza);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -124,6 +129,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1683, 692);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
@@ -452,6 +458,19 @@
             this.lst12.Size = new System.Drawing.Size(335, 137);
             this.lst12.TabIndex = 1;
             // 
+            // btImprimirPoliticas
+            // 
+            this.btImprimirPoliticas.Image = global::Matriz_Riesgo_Politica.Properties.Resources.printer;
+            this.btImprimirPoliticas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btImprimirPoliticas.Location = new System.Drawing.Point(283, 28);
+            this.btImprimirPoliticas.Margin = new System.Windows.Forms.Padding(4);
+            this.btImprimirPoliticas.Name = "btImprimirPoliticas";
+            this.btImprimirPoliticas.Size = new System.Drawing.Size(246, 49);
+            this.btImprimirPoliticas.TabIndex = 21;
+            this.btImprimirPoliticas.Text = "Imprimir Politicas";
+            this.btImprimirPoliticas.UseVisualStyleBackColor = true;
+            this.btImprimirPoliticas.Click += new System.EventHandler(this.btImprimirPoliticas_Click);
+            // 
             // btAgregarAmenaza
             // 
             this.btAgregarAmenaza.Image = global::Matriz_Riesgo_Politica.Properties.Resources.add;
@@ -459,11 +478,23 @@
             this.btAgregarAmenaza.Location = new System.Drawing.Point(29, 28);
             this.btAgregarAmenaza.Margin = new System.Windows.Forms.Padding(4);
             this.btAgregarAmenaza.Name = "btAgregarAmenaza";
-            this.btAgregarAmenaza.Size = new System.Drawing.Size(238, 49);
+            this.btAgregarAmenaza.Size = new System.Drawing.Size(246, 49);
             this.btAgregarAmenaza.TabIndex = 20;
             this.btAgregarAmenaza.Text = "Agregar nueva amenaza";
             this.btAgregarAmenaza.UseVisualStyleBackColor = true;
             this.btAgregarAmenaza.Click += new System.EventHandler(this.btAgregarAmenaza_Click);
+            // 
+            // btImprimirMatriz
+            // 
+            this.btImprimirMatriz.Image = global::Matriz_Riesgo_Politica.Properties.Resources.printer;
+            this.btImprimirMatriz.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btImprimirMatriz.Location = new System.Drawing.Point(537, 28);
+            this.btImprimirMatriz.Margin = new System.Windows.Forms.Padding(4);
+            this.btImprimirMatriz.Name = "btImprimirMatriz";
+            this.btImprimirMatriz.Size = new System.Drawing.Size(246, 49);
+            this.btImprimirMatriz.TabIndex = 22;
+            this.btImprimirMatriz.Text = "Imprimir Matriz";
+            this.btImprimirMatriz.UseVisualStyleBackColor = true;
             // 
             // matriz
             // 
@@ -514,5 +545,8 @@
         private System.Windows.Forms.ListBox lst13;
         private System.Windows.Forms.ListBox lst12;
         private System.Windows.Forms.Button btAgregarAmenaza;
+        private System.Windows.Forms.Button btImprimirPoliticas;
+        private System.Windows.Forms.Button btImprimirMatriz;
+        private System.Windows.Forms.SaveFileDialog saveFileDialogPoliticas;
     }
 }

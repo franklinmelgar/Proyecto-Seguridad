@@ -18,6 +18,7 @@ namespace Matriz_Riesgo_Politica
         public categoriasAmenaza()
         {
             this.detalleAnalisisRiesgoes = new HashSet<detalleAnalisisRiesgo>();
+            this.enunciadoPoliticaAmenazas = new HashSet<enunciadoPoliticaAmenaza>();
         }
     
         public int codigoCategoria { get; set; }
@@ -27,5 +28,7 @@ namespace Matriz_Riesgo_Politica
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<detalleAnalisisRiesgo> detalleAnalisisRiesgoes { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<enunciadoPoliticaAmenaza> enunciadoPoliticaAmenazas { get; set; }
     }
 }
