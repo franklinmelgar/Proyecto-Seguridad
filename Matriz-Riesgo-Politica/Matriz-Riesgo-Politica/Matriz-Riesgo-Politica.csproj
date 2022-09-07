@@ -184,17 +184,17 @@
     <Compile Include="Probabilidad\crearprobabilidad.Designer.cs">
       <DependentUpon>crearprobabilidad.cs</DependentUpon>
     </Compile>
-    <Compile Include="Probabilidad\modificarprobabilidad.cs">
+    <Compile Include="Probabilidad\eliminarprobabilidad.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Probabilidad\modificarprobabilidad.Designer.cs">
-      <DependentUpon>modificarprobabilidad.cs</DependentUpon>
+    <Compile Include="Probabilidad\eliminarprobabilidad.Designer.cs">
+      <DependentUpon>eliminarprobabilidad.cs</DependentUpon>
     </Compile>
-    <Compile Include="Probabilidad\eliminarpropabilidad.cs">
+    <Compile Include="Probabilidad\actualizarprobabilidad.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Probabilidad\eliminarpropabilidad.Designer.cs">
-      <DependentUpon>eliminarpropabilidad.cs</DependentUpon>
+    <Compile Include="Probabilidad\actualizarprobabilidad.Designer.cs">
+      <DependentUpon>actualizarprobabilidad.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -240,11 +240,11 @@
     <EmbeddedResource Include="Probabilidad\crearprobabilidad.resx">
       <DependentUpon>crearprobabilidad.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Probabilidad\eliminarpropabilidad.resx">
-      <DependentUpon>eliminarpropabilidad.cs</DependentUpon>
+    <EmbeddedResource Include="Probabilidad\eliminarprobabilidad.resx">
+      <DependentUpon>eliminarprobabilidad.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Probabilidad\modificarprobabilidad.resx">
-      <DependentUpon>modificarprobabilidad.cs</DependentUpon>
+    <EmbeddedResource Include="Probabilidad\actualizarprobabilidad.resx">
+      <DependentUpon>actualizarprobabilidad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

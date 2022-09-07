@@ -83,6 +83,11 @@ C:\Users\frank\OneDrive\Documents\Clases Ceutec\Proyectos desarrollo\Proyecto-Se
 C:\Users\frank\OneDrive\Documents\Clases Ceutec\Proyectos desarrollo\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\bin\Debug\BouncyCastle.Crypto.dll
 C:\Users\frank\OneDrive\Documents\Clases Ceutec\Proyectos desarrollo\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\bin\Debug\itextsharp.dll
 C:\Users\frank\OneDrive\Documents\Clases Ceutec\Proyectos desarrollo\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\bin\Debug\itextsharp.xml
+<<<<<<< HEAD
+C:\Users\Jenny Godoy\Documents\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Jenny Godoy\Documents\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\bin\Debug\itextsharp.dll
+C:\Users\Jenny Godoy\Documents\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\bin\Debug\itextsharp.xml
+=======
 C:\Users\jissl\OneDrive\Documentos\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\bin\Debug\Matriz-Riesgo-Politica.exe.config
 C:\Users\jissl\OneDrive\Documentos\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\bin\Debug\Matriz-Riesgo-Politica.exe
 C:\Users\jissl\OneDrive\Documentos\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\bin\Debug\Matriz-Riesgo-Politica.pdb
@@ -115,3 +120,4 @@ C:\Users\jissl\OneDrive\Documentos\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Polit
 C:\Users\jissl\OneDrive\Documentos\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz-Riesgo-Politica.csproj.CopyComplete
 C:\Users\jissl\OneDrive\Documentos\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz-Riesgo-Politica.exe
 C:\Users\jissl\OneDrive\Documentos\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz-Riesgo-Politica.pdb
+>>>>>>> 48eb022130a98da04d296c8b60912ed348ada6bd

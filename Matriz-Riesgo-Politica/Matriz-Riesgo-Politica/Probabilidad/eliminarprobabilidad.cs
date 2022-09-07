@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Matriz_Riesgo_Politica.Probabilidad
 {
-    public partial class eliminarpropabilidad : Form
+    public partial class eliminarprobabilidad : Form
     {
-        public eliminarpropabilidad()
+        public eliminarprobabilidad()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

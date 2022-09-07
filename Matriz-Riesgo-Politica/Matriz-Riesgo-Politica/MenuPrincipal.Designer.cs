@@ -731,7 +731,7 @@
             this.label8.Size = new System.Drawing.Size(253, 26);
             this.label8.TabIndex = 19;
             this.label8.Text = "Mantenimiento Amenzas";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
+            //  this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // fmrMenu
             // 
