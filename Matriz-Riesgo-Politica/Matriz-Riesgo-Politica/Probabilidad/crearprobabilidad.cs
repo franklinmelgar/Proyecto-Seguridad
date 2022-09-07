@@ -31,5 +31,10 @@ namespace Matriz_Riesgo_Politica.Probabilidad
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

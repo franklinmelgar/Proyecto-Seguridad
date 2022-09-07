@@ -83,6 +83,41 @@ C:\Users\frank\OneDrive\Documents\Clases Ceutec\Proyectos desarrollo\Proyecto-Se
 C:\Users\frank\OneDrive\Documents\Clases Ceutec\Proyectos desarrollo\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\bin\Debug\BouncyCastle.Crypto.dll
 C:\Users\frank\OneDrive\Documents\Clases Ceutec\Proyectos desarrollo\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\bin\Debug\itextsharp.dll
 C:\Users\frank\OneDrive\Documents\Clases Ceutec\Proyectos desarrollo\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\bin\Debug\itextsharp.xml
+<<<<<<< HEAD
 C:\Users\Jenny Godoy\Documents\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\bin\Debug\BouncyCastle.Crypto.dll
 C:\Users\Jenny Godoy\Documents\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\bin\Debug\itextsharp.dll
 C:\Users\Jenny Godoy\Documents\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\bin\Debug\itextsharp.xml
+=======
+C:\Users\jissl\OneDrive\Documentos\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\bin\Debug\Matriz-Riesgo-Politica.exe.config
+C:\Users\jissl\OneDrive\Documentos\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\bin\Debug\Matriz-Riesgo-Politica.exe
+C:\Users\jissl\OneDrive\Documentos\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\bin\Debug\Matriz-Riesgo-Politica.pdb
+C:\Users\jissl\OneDrive\Documentos\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\jissl\OneDrive\Documentos\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\bin\Debug\EntityFramework.dll
+C:\Users\jissl\OneDrive\Documentos\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\jissl\OneDrive\Documentos\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\bin\Debug\itextsharp.dll
+C:\Users\jissl\OneDrive\Documentos\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\bin\Debug\EntityFramework.xml
+C:\Users\jissl\OneDrive\Documentos\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\jissl\OneDrive\Documentos\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\bin\Debug\itextsharp.xml
+C:\Users\jissl\OneDrive\Documentos\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz-Riesgo-Politica.csproj.AssemblyReference.cache
+C:\Users\jissl\OneDrive\Documentos\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz-Riesgo-Politica.csproj.SuggestedBindingRedirects.cache
+C:\Users\jissl\OneDrive\Documentos\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz_Riesgo_Politica.CrearActivo.resources
+C:\Users\jissl\OneDrive\Documentos\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz_Riesgo_Politica.Activos.EliminarActivo.resources
+C:\Users\jissl\OneDrive\Documentos\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz_Riesgo_Politica.Activos.ModificarActivo.resources
+C:\Users\jissl\OneDrive\Documentos\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz_Riesgo_Politica.Amenazas.CrearAmenaza.resources
+C:\Users\jissl\OneDrive\Documentos\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz_Riesgo_Politica.Amenazas.EliminarAmenaza.resources
+C:\Users\jissl\OneDrive\Documentos\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz_Riesgo_Politica.Amenazas.ModificarAmenaza.resources
+C:\Users\jissl\OneDrive\Documentos\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz_Riesgo_Politica.Impacto.CrearImpacto.resources
+C:\Users\jissl\OneDrive\Documentos\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz_Riesgo_Politica.Matriz.agregarAmenaza.resources
+C:\Users\jissl\OneDrive\Documentos\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz_Riesgo_Politica.Matriz.AgregarMatriz.resources
+C:\Users\jissl\OneDrive\Documentos\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz_Riesgo_Politica.Matriz.matriz.resources
+C:\Users\jissl\OneDrive\Documentos\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz_Riesgo_Politica.fmrMenu.resources
+C:\Users\jissl\OneDrive\Documentos\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz_Riesgo_Politica.Probabilidad.crearprobabilidad.resources
+C:\Users\jissl\OneDrive\Documentos\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz_Riesgo_Politica.Probabilidad.eliminarpropabilidad.resources
+C:\Users\jissl\OneDrive\Documentos\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz_Riesgo_Politica.Probabilidad.modificarprobabilidad.resources
+C:\Users\jissl\OneDrive\Documentos\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz_Riesgo_Politica.Properties.Resources.resources
+C:\Users\jissl\OneDrive\Documentos\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz-Riesgo-Politica.csproj.GenerateResource.cache
+C:\Users\jissl\OneDrive\Documentos\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz-Riesgo-Politica.csproj.CoreCompileInputs.cache
+C:\Users\jissl\OneDrive\Documentos\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz-Riesgo-Politica.csproj.CopyComplete
+C:\Users\jissl\OneDrive\Documentos\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz-Riesgo-Politica.exe
+C:\Users\jissl\OneDrive\Documentos\GitHub\Proyecto-Seguridad\Matriz-Riesgo-Politica\Matriz-Riesgo-Politica\obj\Debug\Matriz-Riesgo-Politica.pdb
+>>>>>>> 48eb022130a98da04d296c8b60912ed348ada6bd
