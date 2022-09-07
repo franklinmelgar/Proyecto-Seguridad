@@ -33,10 +33,16 @@
             this.txtFechaCreacion = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.txtObjetivos = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cmbActivo = new System.Windows.Forms.ComboBox();
             this.btGuardar = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtxNombreAprobador = new System.Windows.Forms.TextBox();
+            this.cmbNivelConfidencialidad = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtAlcance = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -52,15 +58,15 @@
             // 
             this.txtNombreResponsable.Location = new System.Drawing.Point(43, 207);
             this.txtNombreResponsable.Name = "txtNombreResponsable";
-            this.txtNombreResponsable.Size = new System.Drawing.Size(508, 22);
-            this.txtNombreResponsable.TabIndex = 1;
+            this.txtNombreResponsable.Size = new System.Drawing.Size(494, 22);
+            this.txtNombreResponsable.TabIndex = 2;
             // 
             // txtFechaCreacion
             // 
             this.txtFechaCreacion.Location = new System.Drawing.Point(43, 128);
             this.txtFechaCreacion.Name = "txtFechaCreacion";
             this.txtFechaCreacion.Size = new System.Drawing.Size(494, 22);
-            this.txtFechaCreacion.TabIndex = 2;
+            this.txtFechaCreacion.TabIndex = 1;
             // 
             // label2
             // 
@@ -74,19 +80,19 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(40, 260);
+            this.label3.Location = new System.Drawing.Point(40, 384);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(150, 16);
+            this.label3.Size = new System.Drawing.Size(64, 16);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Descripcion de la matriz";
+            this.label3.Text = "Objetivos";
             // 
-            // txtDescripcion
+            // txtObjetivos
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(43, 279);
-            this.txtDescripcion.Multiline = true;
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(508, 104);
-            this.txtDescripcion.TabIndex = 4;
+            this.txtObjetivos.Location = new System.Drawing.Point(43, 403);
+            this.txtObjetivos.Multiline = true;
+            this.txtObjetivos.Name = "txtObjetivos";
+            this.txtObjetivos.Size = new System.Drawing.Size(494, 77);
+            this.txtObjetivos.TabIndex = 5;
             // 
             // label4
             // 
@@ -103,35 +109,97 @@
             this.cmbActivo.Location = new System.Drawing.Point(43, 49);
             this.cmbActivo.Name = "cmbActivo";
             this.cmbActivo.Size = new System.Drawing.Size(494, 24);
-            this.cmbActivo.TabIndex = 7;
+            this.cmbActivo.TabIndex = 0;
             // 
             // btGuardar
             // 
-            this.btGuardar.Location = new System.Drawing.Point(392, 417);
+            this.btGuardar.Location = new System.Drawing.Point(378, 624);
             this.btGuardar.Name = "btGuardar";
             this.btGuardar.Size = new System.Drawing.Size(159, 30);
             this.btGuardar.TabIndex = 8;
             this.btGuardar.Text = "Crear Matriz";
             this.btGuardar.UseVisualStyleBackColor = true;
-            this.btGuardar.Click += new System.EventHandler(this.button1_Click);
+            this.btGuardar.Click += new System.EventHandler(this.btGuardar_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(40, 248);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(145, 16);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Nombre del aprobador";
+            // 
+            // txtxNombreAprobador
+            // 
+            this.txtxNombreAprobador.Location = new System.Drawing.Point(43, 267);
+            this.txtxNombreAprobador.Name = "txtxNombreAprobador";
+            this.txtxNombreAprobador.Size = new System.Drawing.Size(494, 22);
+            this.txtxNombreAprobador.TabIndex = 3;
+            // 
+            // cmbNivelConfidencialidad
+            // 
+            this.cmbNivelConfidencialidad.FormattingEnabled = true;
+            this.cmbNivelConfidencialidad.Items.AddRange(new object[] {
+            "Confidencial",
+            "Restringida",
+            "De uso interno",
+            "Publico"});
+            this.cmbNivelConfidencialidad.Location = new System.Drawing.Point(43, 338);
+            this.cmbNivelConfidencialidad.Name = "cmbNivelConfidencialidad";
+            this.cmbNivelConfidencialidad.Size = new System.Drawing.Size(494, 24);
+            this.cmbNivelConfidencialidad.TabIndex = 4;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(40, 318);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(159, 16);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Nivel de confidencialidad";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(40, 503);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(56, 16);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Alcance";
+            // 
+            // txtAlcance
+            // 
+            this.txtAlcance.Location = new System.Drawing.Point(43, 522);
+            this.txtAlcance.Multiline = true;
+            this.txtAlcance.Name = "txtAlcance";
+            this.txtAlcance.Size = new System.Drawing.Size(494, 77);
+            this.txtAlcance.TabIndex = 6;
             // 
             // AgregarMatriz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(607, 485);
+            this.ClientSize = new System.Drawing.Size(587, 676);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtAlcance);
+            this.Controls.Add(this.cmbNivelConfidencialidad);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtxNombreAprobador);
             this.Controls.Add(this.btGuardar);
             this.Controls.Add(this.cmbActivo);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtDescripcion);
+            this.Controls.Add(this.txtObjetivos);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtFechaCreacion);
             this.Controls.Add(this.txtNombreResponsable);
             this.Controls.Add(this.label1);
             this.Name = "AgregarMatriz";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Agregar Matriz";
+            this.Text = "Crear Nueva Matriz";
+            this.Load += new System.EventHandler(this.AgregarMatriz_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,9 +212,15 @@
         private System.Windows.Forms.DateTimePicker txtFechaCreacion;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.TextBox txtObjetivos;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cmbActivo;
         private System.Windows.Forms.Button btGuardar;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtxNombreAprobador;
+        private System.Windows.Forms.ComboBox cmbNivelConfidencialidad;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtAlcance;
     }
 }

@@ -302,8 +302,6 @@
     <None Include="Iconos\Amenazas.png" />
     <None Include="Iconos\Activos.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Posibilidad\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
