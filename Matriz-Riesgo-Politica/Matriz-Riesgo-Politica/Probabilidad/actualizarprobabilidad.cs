@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Matriz_Riesgo_Politica.Probabilidad
 {
-    public partial class modificarprobabilidad : Form
+    public partial class actualizarprobabilidad : Form
     {
-        public modificarprobabilidad()
+        public actualizarprobabilidad()
         {
             InitializeComponent();
         }
