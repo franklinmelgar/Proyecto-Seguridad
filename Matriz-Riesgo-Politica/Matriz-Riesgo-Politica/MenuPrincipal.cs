@@ -201,8 +201,8 @@ namespace Matriz_Riesgo_Politica
 
         private void button5_Click(object sender, EventArgs e)
         {
-            CrearImpacto crearImpacto = new CrearImpacto();
-            crearImpacto.Show();
+            //CrearImpacto crearImpacto = new CrearImpacto();
+            //crearImpacto.Show();
         }
 
         private void btAgregarMatriz_Click(object sender, EventArgs e)

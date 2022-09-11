@@ -173,6 +173,13 @@ namespace Matriz_Riesgo_Politica.Matriz
             return cabecera;
         }
 
+        private detalleAnalisisRiesgo GetDataDetail(int codigoMatriz)
+        {
+            detalleAnalisisRiesgo detailData = BD.detalleAnalisisRiesgoes.Where(c => c.codigoAnalisisRiesgo.Equals(codigoMatriz)).FirstOrDefault();
+
+            return detailData;
+        }
+
         private void obtenerAmenazas(Document doc)
         {
             string nombreControl;
@@ -712,6 +719,86 @@ namespace Matriz_Riesgo_Politica.Matriz
                 doc.Add(Chunk.NEWLINE);
 
             }
+        }
+
+        private void btImprimirMatriz_Click(object sender, EventArgs e)
+        {
+            
+            string direccion = "";
+            saveFileDialogPoliticas.InitialDirectory = @"C:\";
+            saveFileDialogPoliticas.Title = "Guardar PDF de matriz";
+            saveFileDialogPoliticas.DefaultExt = "pdf";
+            saveFileDialogPoliticas.Filter = "Pdf files (*.pdf)|*.pdf";
+            saveFileDialogPoliticas.FilterIndex = 2;
+            saveFileDialogPoliticas.RestoreDirectory = true;
+            if (saveFileDialogPoliticas.ShowDialog() == DialogResult.OK)
+            {
+                direccion = saveFileDialogPoliticas.FileName;
+
+                Document doc = new Document(iTextSharp.text.PageSize.A4.Rotate());
+                PdfWriter.GetInstance(doc, new FileStream(direccion, FileMode.Create));
+                doc.Open();
+
+                PdfPTable tableColumns = new PdfPTable(6);
+
+                var dataDetail = GetDataDetail(int.Parse(codigoMatriz));
+                // amenzaDetail = dataDetail.
+
+               // var amenazas = BD.categoriasAmenazas.Where(e=> );
+
+                tableColumns.AddCell("");
+                tableColumns.AddCell("Insignificante");
+                tableColumns.AddCell("Menor");
+                tableColumns.AddCell("Moderado");
+                tableColumns.AddCell("Mayor");
+                tableColumns.AddCell("Severo");
+
+                tableColumns.AddCell("Row 2, Col 1");
+                tableColumns.AddCell("Row 2, Col 2");
+                tableColumns.AddCell("Row 2, Col 3");
+                tableColumns.AddCell("Row 2, Col 4");
+                tableColumns.AddCell("Row 2, Col 5");
+                tableColumns.AddCell("Row 2, Col 6");
+
+                tableColumns.AddCell("Row 3, Col 1");
+                tableColumns.AddCell("Row 3, Col 2");
+                tableColumns.AddCell("Row 3, Col 3");
+                tableColumns.AddCell("Row 3, Col 4");
+                tableColumns.AddCell("Row 3, Col 5");
+                tableColumns.AddCell("Row 3, Col 6");
+
+                tableColumns.AddCell("Row 4, Col 1");
+                tableColumns.AddCell("Row 4, Col 2");
+                tableColumns.AddCell("Row 4, Col 3");
+                tableColumns.AddCell("Row 4, Col 4");
+                tableColumns.AddCell("Row 4, Col 5");
+                tableColumns.AddCell("Row 4, Col 6");
+
+                tableColumns.AddCell("Row 5, Col 1");
+                tableColumns.AddCell("Row 5, Col 2");
+                tableColumns.AddCell("Row 5, Col 3");
+                tableColumns.AddCell("Row 5, Col 4");
+                tableColumns.AddCell("Row 5, Col 5");
+                tableColumns.AddCell("Row 5, Col 6");
+
+                tableColumns.AddCell("Row 6, Col 1");
+                tableColumns.AddCell("Row 6, Col 2");
+                tableColumns.AddCell("Row 6, Col 3");
+                tableColumns.AddCell("Row 6, Col 4");
+                tableColumns.AddCell("Row 6, Col 5");
+                tableColumns.AddCell("Row 6, Col 6");
+
+                //Imprimir Listado
+                obtenerAmenazas(doc);
+
+                doc.Add(tableColumns);
+
+                doc.Close();
+
+                MessageBox.Show("Se guardo correctamente el archivo de politica", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+
         }
     }
 }
