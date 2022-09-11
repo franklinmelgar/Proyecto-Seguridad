@@ -366,3 +366,8 @@ FodyWeavers.xsd
 # All Selected Files
 
 App.config
+*.config
+*.config
+*.config
+Matriz-Riesgo-Politica/Matriz-Riesgo-Politica/App.config
+*.config

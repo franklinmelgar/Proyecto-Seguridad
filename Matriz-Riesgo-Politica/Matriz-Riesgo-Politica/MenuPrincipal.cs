@@ -3,6 +3,8 @@ using Matriz_Riesgo_Politica.Amenazas;
 using Matriz_Riesgo_Politica.Impacto;
 using Matriz_Riesgo_Politica.Matriz;
 using System;
+using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -11,6 +13,8 @@ namespace Matriz_Riesgo_Politica
     public partial class fmrMenu : Form
     {
         Gestion_RiesgosEntities DB = new Gestion_RiesgosEntities();
+        int codigoMatriz;
+
         public fmrMenu()
         {
             InitializeComponent();
@@ -18,8 +22,7 @@ namespace Matriz_Riesgo_Politica
 
         private void Form1_Load(object sender, EventArgs e)
         {
-        
-
+            obtenerActivos();
         }
 
         private void obtenerActivos()
@@ -46,25 +49,72 @@ namespace Matriz_Riesgo_Politica
 
         }
 
+        private void estableColor(string boton)
+        {
+            if (boton.Equals("Activos"))
+            {
+                btActivos.BackColor = Color.FromArgb(244, 81, 30);
+                btAmenazas.BackColor = Color.FromArgb(51, 51, 76);
+                btPosibilidad.BackColor = Color.FromArgb(51, 51, 76);
+                btImpacto.BackColor = Color.FromArgb(51, 51, 76);
+                btMatriz.BackColor = Color.FromArgb(51, 51, 76);
+            }else if (boton.Equals("Amenazas"))
+            {
+                btActivos.BackColor = Color.FromArgb(51, 51, 76);
+                btAmenazas.BackColor = Color.FromArgb(244, 81, 30);
+                btPosibilidad.BackColor = Color.FromArgb(51, 51, 76);
+                btImpacto.BackColor = Color.FromArgb(51, 51, 76);
+                btMatriz.BackColor = Color.FromArgb(51, 51, 76);
+            }
+            else if (boton.Equals("Posibilidades"))
+            {
+                btActivos.BackColor = Color.FromArgb(51, 51, 76);
+                btAmenazas.BackColor = Color.FromArgb(51, 51, 76);
+                btPosibilidad.BackColor = Color.FromArgb(244, 81, 30); 
+                btImpacto.BackColor = Color.FromArgb(51, 51, 76);
+                btMatriz.BackColor = Color.FromArgb(51, 51, 76);
+            }
+            else if (boton.Equals("Impacto"))
+            {
+                btActivos.BackColor = Color.FromArgb(51, 51, 76);
+                btAmenazas.BackColor = Color.FromArgb(51, 51, 76);
+                btPosibilidad.BackColor = Color.FromArgb(51, 51, 76);
+                btImpacto.BackColor = Color.FromArgb(244, 81, 30);
+                btMatriz.BackColor = Color.FromArgb(51, 51, 76);
+            }
+            else if (boton.Equals("Matriz"))
+            {
+                btActivos.BackColor = Color.FromArgb(51, 51, 76);
+                btAmenazas.BackColor = Color.FromArgb(51, 51, 76);
+                btPosibilidad.BackColor = Color.FromArgb(51, 51, 76);
+                btImpacto.BackColor = Color.FromArgb(51, 51, 76);
+                btMatriz.BackColor = Color.FromArgb(244, 81, 30);  
+            }
+        }
+
         private void btActivos_Click(object sender, EventArgs e)
         {
+            estableColor("Activos");
             obtenerActivos();
             tabContenedorPrincipal.SelectedTab = tabContenedorPrincipal.TabPages[0];
         }
 
         private void btAmenazas_Click(object sender, EventArgs e)
         {
+            estableColor("Amenazas");
             obtenerAmenazas();
             tabContenedorPrincipal.SelectedTab = tabContenedorPrincipal.TabPages[1];
         }
 
         private void btPosibilidad_Click(object sender, EventArgs e)
         {
+            estableColor("Posibilidades");
             tabContenedorPrincipal.SelectedTab = tabContenedorPrincipal.TabPages[2];
         }
 
         private void btImpacto_Click(object sender, EventArgs e)
         {
+            estableColor("Impacto");
             obtenerImpacto();
             tabContenedorPrincipal.SelectedTab = tabContenedorPrincipal.TabPages[3];
         }
@@ -139,6 +189,7 @@ namespace Matriz_Riesgo_Politica
 
         private void button1_Click(object sender, EventArgs e)
         {
+            estableColor("Matriz");
             obtenerMatrices();
             tabContenedorPrincipal.SelectedTab = tabContenedorPrincipal.TabPages[4];
         }
@@ -162,9 +213,9 @@ namespace Matriz_Riesgo_Politica
 
         private void grdMatrices_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            string codigoMatriz = grdMatrices.Rows[e.RowIndex].Cells[0].Value.ToString();
+            codigoMatriz = int.Parse(grdMatrices.Rows[e.RowIndex].Cells[0].Value.ToString());
             matriz mtr = new matriz();
-            mtr.codigoMatriz = codigoMatriz;
+            mtr.codigoMatriz = codigoMatriz.ToString();
             mtr.Show();
         }
 
@@ -173,5 +224,29 @@ namespace Matriz_Riesgo_Politica
 
         }
 
+        private void btModificarMatriz_Click(object sender, EventArgs e)
+        {
+            modificarMatriz modificar = new modificarMatriz();
+            modificar.codigoMatriz = codigoMatriz;
+            modificar.Show();            
+        }
+
+        private void grdMatrices_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            codigoMatriz = int.Parse(grdMatrices.Rows[e.RowIndex].Cells[0].Value.ToString());            
+        }
+
+        private void txtBuscarActivo_TextChanged(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void btEliminarMatriz_Click(object sender, EventArgs e)
+        {
+            eliminarMatriz eliminar = new eliminarMatriz();
+            eliminar.codigoMatriz = codigoMatriz;
+            eliminar.Show();
+            
+        }
     }
 }

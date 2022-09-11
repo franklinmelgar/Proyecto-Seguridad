@@ -1,19 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="Gestion_RiesgosModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityType Name="accionRiesgo">
-    <Key>
-      <PropertyRef Name="codigoAccion" />
-    </Key>
-    <Property Name="codigoAccion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="codigoPosibilidad" Type="Int32" Nullable="false" />
-    <Property Name="codigoImpacto" Type="Int32" Nullable="false" />
-    <Property Name="descripcionAccion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="impactoRiesgo" Relationship="Self.FK_AccionRiesgo_impactoRiesgo" FromRole="accionRiesgo" ToRole="impactoRiesgo" />
-    <NavigationProperty Name="posibilidadRiesgo" Relationship="Self.FK_AccionRiesgo_posibilidadRiesgo" FromRole="accionRiesgo" ToRole="posibilidadRiesgo" />
-    <NavigationProperty Name="detalleAnalisisRiesgoes" Relationship="Self.FK_detalleAnalisisRiesgo_AccionRiesgo" FromRole="accionRiesgo" ToRole="detalleAnalisisRiesgo" />
-    <Property Name="nivelRiesgoMinimo" Type="Int32" />
-    <Property Name="nivelRiesgoMayor" Type="Int32" />
-  </EntityType>
   <EntityType Name="Activo">
     <Key>
       <PropertyRef Name="codigoActivo" />
@@ -31,26 +17,9 @@
     <Property Name="nombreCategoriaRiesgo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="descripcionCategoriaRiesgo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="tipoCreacionAmenaza" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="detalleAnalisisRiesgoes" Relationship="Self.FK_detalleAnalisisRiesgo_categoriasAmenazas" FromRole="categoriasAmenazas" ToRole="detalleAnalisisRiesgo" />
     <NavigationProperty Name="enunciadoPoliticaAmenazas" Relationship="Gestion_RiesgosModel.FK_enunciadoPoliticaAmenaza_categoriasAmenazas" FromRole="categoriasAmenaza" ToRole="enunciadoPoliticaAmenaza" />
-  </EntityType>
-  <EntityType Name="detalleAnalisisRiesgo">
-    <Key>
-      <PropertyRef Name="codigoDetalleRiesgo" />
-      <PropertyRef Name="codigoAnalisisRiesgo" />
-    </Key>
-    <Property Name="codigoDetalleRiesgo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="codigoAnalisisRiesgo" Type="Int32" Nullable="false" />
-    <Property Name="codigoCategoriaAmenza" Type="Int32" />
-    <Property Name="codigoImpacto" Type="Int32" />
-    <Property Name="codigoPosibilidad" Type="Int32" />
-    <Property Name="nombreRiesgo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="codigoAccion" Type="Int32" />
-    <NavigationProperty Name="accionRiesgo" Relationship="Self.FK_detalleAnalisisRiesgo_AccionRiesgo" FromRole="detalleAnalisisRiesgo" ToRole="accionRiesgo" />
-    <NavigationProperty Name="categoriasAmenaza" Relationship="Self.FK_detalleAnalisisRiesgo_categoriasAmenazas" FromRole="detalleAnalisisRiesgo" ToRole="categoriasAmenazas" />
-    <NavigationProperty Name="impactoRiesgo" Relationship="Self.FK_detalleAnalisisRiesgo_impactoRiesgo" FromRole="detalleAnalisisRiesgo" ToRole="impactoRiesgo" />
-    <NavigationProperty Name="posibilidadRiesgo" Relationship="Self.FK_detalleAnalisisRiesgo_posibilidadRiesgo" FromRole="detalleAnalisisRiesgo" ToRole="posibilidadRiesgo" />
-    <NavigationProperty Name="cabeceraAnalisisRiesgo" Relationship="Gestion_RiesgosModel.FK_detalleAnalisisRiesgo_cabeceraAnalisisRiesgo" FromRole="detalleAnalisisRiesgo" ToRole="cabeceraAnalisisRiesgo" />
+    <NavigationProperty Name="AccionRiesgoes" Relationship="Gestion_RiesgosModel.FK_AccionRiesgo_categoriasAmenazas" FromRole="categoriasAmenaza" ToRole="AccionRiesgo" />
+    <NavigationProperty Name="detalleAnalisisRiesgoes" Relationship="Gestion_RiesgosModel.FK_detalleAnalisisRiesgo_categoriasAmenazas" FromRole="categoriasAmenaza" ToRole="detalleAnalisisRiesgo" />
   </EntityType>
   <EntityType Name="impactoRiesgo">
     <Key>
@@ -60,8 +29,7 @@
     <Property Name="nivelImpacto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="puntajeImpacto" Type="Int32" />
     <Property Name="descripcionImpacto" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="accionRiesgoes" Relationship="Self.FK_AccionRiesgo_impactoRiesgo" FromRole="impactoRiesgo" ToRole="accionRiesgo" />
-    <NavigationProperty Name="detalleAnalisisRiesgoes" Relationship="Self.FK_detalleAnalisisRiesgo_impactoRiesgo" FromRole="impactoRiesgo" ToRole="detalleAnalisisRiesgo" />
+    <NavigationProperty Name="detalleAnalisisRiesgoes" Relationship="Gestion_RiesgosModel.FK_detalleAnalisisRiesgo_impactoRiesgo" FromRole="impactoRiesgo" ToRole="detalleAnalisisRiesgo" />
   </EntityType>
   <EntityType Name="posibilidadRiesgo">
     <Key>
@@ -71,122 +39,19 @@
     <Property Name="nivelPosibilidad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="puntajePosibilidad" Type="Int32" />
     <Property Name="descripcionPosibilidad" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="accionRiesgoes" Relationship="Self.FK_AccionRiesgo_posibilidadRiesgo" FromRole="posibilidadRiesgo" ToRole="accionRiesgo" />
-    <NavigationProperty Name="detalleAnalisisRiesgoes" Relationship="Self.FK_detalleAnalisisRiesgo_posibilidadRiesgo" FromRole="posibilidadRiesgo" ToRole="detalleAnalisisRiesgo" />
+    <NavigationProperty Name="detalleAnalisisRiesgoes" Relationship="Gestion_RiesgosModel.FK_detalleAnalisisRiesgo_posibilidadRiesgo" FromRole="posibilidadRiesgo" ToRole="detalleAnalisisRiesgo" />
   </EntityType>
-  <Association Name="FK_AccionRiesgo_impactoRiesgo">
-    <End Role="impactoRiesgo" Type="Self.impactoRiesgo" Multiplicity="1" />
-    <End Role="accionRiesgo" Type="Self.accionRiesgo" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="impactoRiesgo">
-        <PropertyRef Name="codigoImpacto" />
-      </Principal>
-      <Dependent Role="accionRiesgo">
-        <PropertyRef Name="codigoImpacto" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_AccionRiesgo_posibilidadRiesgo">
-    <End Role="posibilidadRiesgo" Type="Self.posibilidadRiesgo" Multiplicity="1" />
-    <End Role="accionRiesgo" Type="Self.accionRiesgo" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="posibilidadRiesgo">
-        <PropertyRef Name="codigoPosibilidad" />
-      </Principal>
-      <Dependent Role="accionRiesgo">
-        <PropertyRef Name="codigoPosibilidad" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_detalleAnalisisRiesgo_AccionRiesgo">
-    <End Role="accionRiesgo" Type="Self.accionRiesgo" Multiplicity="0..1" />
-    <End Role="detalleAnalisisRiesgo" Type="Self.detalleAnalisisRiesgo" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="accionRiesgo">
-        <PropertyRef Name="codigoAccion" />
-      </Principal>
-      <Dependent Role="detalleAnalisisRiesgo">
-        <PropertyRef Name="codigoAccion" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_detalleAnalisisRiesgo_categoriasAmenazas">
-    <End Role="categoriasAmenazas" Type="Self.categoriasAmenaza" Multiplicity="0..1" />
-    <End Role="detalleAnalisisRiesgo" Type="Self.detalleAnalisisRiesgo" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="categoriasAmenazas">
-        <PropertyRef Name="codigoCategoria" />
-      </Principal>
-      <Dependent Role="detalleAnalisisRiesgo">
-        <PropertyRef Name="codigoCategoriaAmenza" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_detalleAnalisisRiesgo_impactoRiesgo">
-    <End Role="impactoRiesgo" Type="Self.impactoRiesgo" Multiplicity="0..1" />
-    <End Role="detalleAnalisisRiesgo" Type="Self.detalleAnalisisRiesgo" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="impactoRiesgo">
-        <PropertyRef Name="codigoImpacto" />
-      </Principal>
-      <Dependent Role="detalleAnalisisRiesgo">
-        <PropertyRef Name="codigoImpacto" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_detalleAnalisisRiesgo_posibilidadRiesgo">
-    <End Role="posibilidadRiesgo" Type="Self.posibilidadRiesgo" Multiplicity="0..1" />
-    <End Role="detalleAnalisisRiesgo" Type="Self.detalleAnalisisRiesgo" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="posibilidadRiesgo">
-        <PropertyRef Name="codigoPosibilidad" />
-      </Principal>
-      <Dependent Role="detalleAnalisisRiesgo">
-        <PropertyRef Name="codigoPosibilidad" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <EntityContainer Name="Gestion_RiesgosEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="accionRiesgoes" EntityType="Self.accionRiesgo" />
     <EntitySet Name="Activos" EntityType="Self.Activo" />
     <EntitySet Name="categoriasAmenazas" EntityType="Self.categoriasAmenaza" />
-    <EntitySet Name="detalleAnalisisRiesgoes" EntityType="Self.detalleAnalisisRiesgo" />
     <EntitySet Name="impactoRiesgoes" EntityType="Self.impactoRiesgo" />
     <EntitySet Name="posibilidadRiesgoes" EntityType="Self.posibilidadRiesgo" />
-    <AssociationSet Name="FK_AccionRiesgo_impactoRiesgo" Association="Self.FK_AccionRiesgo_impactoRiesgo">
-      <End Role="impactoRiesgo" EntitySet="impactoRiesgoes" />
-      <End Role="accionRiesgo" EntitySet="accionRiesgoes" />
-    </AssociationSet>
-    <AssociationSet Name="FK_AccionRiesgo_posibilidadRiesgo" Association="Self.FK_AccionRiesgo_posibilidadRiesgo">
-      <End Role="posibilidadRiesgo" EntitySet="posibilidadRiesgoes" />
-      <End Role="accionRiesgo" EntitySet="accionRiesgoes" />
-    </AssociationSet>
-    <AssociationSet Name="FK_detalleAnalisisRiesgo_AccionRiesgo" Association="Self.FK_detalleAnalisisRiesgo_AccionRiesgo">
-      <End Role="accionRiesgo" EntitySet="accionRiesgoes" />
-      <End Role="detalleAnalisisRiesgo" EntitySet="detalleAnalisisRiesgoes" />
-    </AssociationSet>
-    <AssociationSet Name="FK_detalleAnalisisRiesgo_categoriasAmenazas" Association="Self.FK_detalleAnalisisRiesgo_categoriasAmenazas">
-      <End Role="categoriasAmenazas" EntitySet="categoriasAmenazas" />
-      <End Role="detalleAnalisisRiesgo" EntitySet="detalleAnalisisRiesgoes" />
-    </AssociationSet>
-    <AssociationSet Name="FK_detalleAnalisisRiesgo_impactoRiesgo" Association="Self.FK_detalleAnalisisRiesgo_impactoRiesgo">
-      <End Role="impactoRiesgo" EntitySet="impactoRiesgoes" />
-      <End Role="detalleAnalisisRiesgo" EntitySet="detalleAnalisisRiesgoes" />
-    </AssociationSet>
-    <AssociationSet Name="FK_detalleAnalisisRiesgo_posibilidadRiesgo" Association="Self.FK_detalleAnalisisRiesgo_posibilidadRiesgo">
-      <End Role="posibilidadRiesgo" EntitySet="posibilidadRiesgoes" />
-      <End Role="detalleAnalisisRiesgo" EntitySet="detalleAnalisisRiesgoes" />
-    </AssociationSet>
     <EntitySet Name="seccionPoliticaAmenazas" EntityType="Gestion_RiesgosModel.seccionPoliticaAmenaza" />
     <EntitySet Name="sysdiagrams" EntityType="Gestion_RiesgosModel.sysdiagram" />
     <EntitySet Name="cabeceraAnalisisRiesgoes" EntityType="Gestion_RiesgosModel.cabeceraAnalisisRiesgo" />
     <AssociationSet Name="FK_cabeceraAnalisisRiesgo_Activos" Association="Gestion_RiesgosModel.FK_cabeceraAnalisisRiesgo_Activos">
       <End Role="Activo" EntitySet="Activos" />
       <End Role="cabeceraAnalisisRiesgo" EntitySet="cabeceraAnalisisRiesgoes" />
-    </AssociationSet>
-    <AssociationSet Name="FK_detalleAnalisisRiesgo_cabeceraAnalisisRiesgo" Association="Gestion_RiesgosModel.FK_detalleAnalisisRiesgo_cabeceraAnalisisRiesgo">
-      <End Role="cabeceraAnalisisRiesgo" EntitySet="cabeceraAnalisisRiesgoes" />
-      <End Role="detalleAnalisisRiesgo" EntitySet="detalleAnalisisRiesgoes" />
     </AssociationSet>
     <EntitySet Name="enunciadoPoliticaAmenazas" EntityType="Gestion_RiesgosModel.enunciadoPoliticaAmenaza" />
     <AssociationSet Name="FK_enunciadoPoliticaAmenaza_categoriasAmenazas" Association="Gestion_RiesgosModel.FK_enunciadoPoliticaAmenaza_categoriasAmenazas">
@@ -196,6 +61,37 @@
     <AssociationSet Name="FK_seccionPoliticaAmenaza_enunciadoPoliticaAmenaza" Association="Gestion_RiesgosModel.FK_seccionPoliticaAmenaza_enunciadoPoliticaAmenaza">
       <End Role="enunciadoPoliticaAmenaza" EntitySet="enunciadoPoliticaAmenazas" />
       <End Role="seccionPoliticaAmenaza" EntitySet="seccionPoliticaAmenazas" />
+    </AssociationSet>
+    <EntitySet Name="AccionRiesgoes" EntityType="Gestion_RiesgosModel.AccionRiesgo" />
+    <AssociationSet Name="FK_AccionRiesgo_categoriasAmenazas" Association="Gestion_RiesgosModel.FK_AccionRiesgo_categoriasAmenazas">
+      <End Role="categoriasAmenaza" EntitySet="categoriasAmenazas" />
+      <End Role="AccionRiesgo" EntitySet="AccionRiesgoes" />
+    </AssociationSet>
+    <EntitySet Name="configuracionRiesgoes" EntityType="Gestion_RiesgosModel.configuracionRiesgo" />
+    <EntitySet Name="detalleAnalisisRiesgoes" EntityType="Gestion_RiesgosModel.detalleAnalisisRiesgo" />
+    <AssociationSet Name="FK_AccionRiesgo_configuracionRiesgo" Association="Gestion_RiesgosModel.FK_AccionRiesgo_configuracionRiesgo">
+      <End Role="configuracionRiesgo" EntitySet="configuracionRiesgoes" />
+      <End Role="AccionRiesgo" EntitySet="AccionRiesgoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_detalleAnalisisRiesgo_cabeceraAnalisisRiesgo" Association="Gestion_RiesgosModel.FK_detalleAnalisisRiesgo_cabeceraAnalisisRiesgo">
+      <End Role="cabeceraAnalisisRiesgo" EntitySet="cabeceraAnalisisRiesgoes" />
+      <End Role="detalleAnalisisRiesgo" EntitySet="detalleAnalisisRiesgoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_detalleAnalisisRiesgo_categoriasAmenazas" Association="Gestion_RiesgosModel.FK_detalleAnalisisRiesgo_categoriasAmenazas">
+      <End Role="categoriasAmenaza" EntitySet="categoriasAmenazas" />
+      <End Role="detalleAnalisisRiesgo" EntitySet="detalleAnalisisRiesgoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_detalleAnalisisRiesgo_configuracionRiesgo" Association="Gestion_RiesgosModel.FK_detalleAnalisisRiesgo_configuracionRiesgo">
+      <End Role="configuracionRiesgo" EntitySet="configuracionRiesgoes" />
+      <End Role="detalleAnalisisRiesgo" EntitySet="detalleAnalisisRiesgoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_detalleAnalisisRiesgo_impactoRiesgo" Association="Gestion_RiesgosModel.FK_detalleAnalisisRiesgo_impactoRiesgo">
+      <End Role="impactoRiesgo" EntitySet="impactoRiesgoes" />
+      <End Role="detalleAnalisisRiesgo" EntitySet="detalleAnalisisRiesgoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_detalleAnalisisRiesgo_posibilidadRiesgo" Association="Gestion_RiesgosModel.FK_detalleAnalisisRiesgo_posibilidadRiesgo">
+      <End Role="posibilidadRiesgo" EntitySet="posibilidadRiesgoes" />
+      <End Role="detalleAnalisisRiesgo" EntitySet="detalleAnalisisRiesgoes" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="seccionPoliticaAmenaza">
@@ -244,18 +140,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_detalleAnalisisRiesgo_cabeceraAnalisisRiesgo">
-    <End Type="Gestion_RiesgosModel.cabeceraAnalisisRiesgo" Role="cabeceraAnalisisRiesgo" Multiplicity="1" />
-    <End Type="Gestion_RiesgosModel.detalleAnalisisRiesgo" Role="detalleAnalisisRiesgo" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="cabeceraAnalisisRiesgo">
-        <PropertyRef Name="codigoAnalisisRiesgo" />
-      </Principal>
-      <Dependent Role="detalleAnalisisRiesgo">
-        <PropertyRef Name="codigoAnalisisRiesgo" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <EntityType Name="enunciadoPoliticaAmenaza">
     <Key>
       <PropertyRef Name="codigoEnunciadoPolitica" />
@@ -287,6 +171,130 @@
       </Principal>
       <Dependent Role="seccionPoliticaAmenaza">
         <PropertyRef Name="codigoEnunciadoPolitica" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="AccionRiesgo">
+    <Key>
+      <PropertyRef Name="codigoAccion" />
+    </Key>
+    <Property Name="codigoAccion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="codigoCategoria" Type="Int32" />
+    <Property Name="nivelRiesgoMinimo" Type="Int32" />
+    <Property Name="nivelRiesgoMayor" Type="Int32" />
+    <Property Name="descripcionAccion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="codigoAccionRiesgo" Type="Int32" />
+    <NavigationProperty Name="categoriasAmenaza" Relationship="Gestion_RiesgosModel.FK_AccionRiesgo_categoriasAmenazas" FromRole="AccionRiesgo" ToRole="categoriasAmenaza" />
+    <NavigationProperty Name="configuracionRiesgo" Relationship="Gestion_RiesgosModel.FK_AccionRiesgo_configuracionRiesgo" FromRole="AccionRiesgo" ToRole="configuracionRiesgo" />
+  </EntityType>
+  <Association Name="FK_AccionRiesgo_categoriasAmenazas">
+    <End Type="Gestion_RiesgosModel.categoriasAmenaza" Role="categoriasAmenaza" Multiplicity="0..1" />
+    <End Type="Gestion_RiesgosModel.AccionRiesgo" Role="AccionRiesgo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="categoriasAmenaza">
+        <PropertyRef Name="codigoCategoria" />
+      </Principal>
+      <Dependent Role="AccionRiesgo">
+        <PropertyRef Name="codigoCategoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="configuracionRiesgo">
+    <Key>
+      <PropertyRef Name="codigoAccionRiesgo" />
+    </Key>
+    <Property Name="codigoAccionRiesgo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcionAccionRiesgo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="AccionRiesgoes" Relationship="Gestion_RiesgosModel.FK_AccionRiesgo_configuracionRiesgo" FromRole="configuracionRiesgo" ToRole="AccionRiesgo" />
+    <NavigationProperty Name="detalleAnalisisRiesgoes" Relationship="Gestion_RiesgosModel.FK_detalleAnalisisRiesgo_configuracionRiesgo" FromRole="configuracionRiesgo" ToRole="detalleAnalisisRiesgo" />
+  </EntityType>
+  <EntityType Name="detalleAnalisisRiesgo">
+    <Key>
+      <PropertyRef Name="codigoDetalleRiesgo" />
+      <PropertyRef Name="codigoAnalisisRiesgo" />
+    </Key>
+    <Property Name="codigoDetalleRiesgo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="codigoAnalisisRiesgo" Type="Int32" Nullable="false" />
+    <Property Name="codigoCategoriaAmenza" Type="Int32" />
+    <Property Name="codigoImpacto" Type="Int32" />
+    <Property Name="codigoPosibilidad" Type="Int32" />
+    <Property Name="nombreRiesgo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="codigoAccionRiesgo" Type="Int32" />
+    <NavigationProperty Name="cabeceraAnalisisRiesgo" Relationship="Gestion_RiesgosModel.FK_detalleAnalisisRiesgo_cabeceraAnalisisRiesgo" FromRole="detalleAnalisisRiesgo" ToRole="cabeceraAnalisisRiesgo" />
+    <NavigationProperty Name="categoriasAmenaza" Relationship="Gestion_RiesgosModel.FK_detalleAnalisisRiesgo_categoriasAmenazas" FromRole="detalleAnalisisRiesgo" ToRole="categoriasAmenaza" />
+    <NavigationProperty Name="configuracionRiesgo" Relationship="Gestion_RiesgosModel.FK_detalleAnalisisRiesgo_configuracionRiesgo" FromRole="detalleAnalisisRiesgo" ToRole="configuracionRiesgo" />
+    <NavigationProperty Name="impactoRiesgo" Relationship="Gestion_RiesgosModel.FK_detalleAnalisisRiesgo_impactoRiesgo" FromRole="detalleAnalisisRiesgo" ToRole="impactoRiesgo" />
+    <NavigationProperty Name="posibilidadRiesgo" Relationship="Gestion_RiesgosModel.FK_detalleAnalisisRiesgo_posibilidadRiesgo" FromRole="detalleAnalisisRiesgo" ToRole="posibilidadRiesgo" />
+  </EntityType>
+  <Association Name="FK_AccionRiesgo_configuracionRiesgo">
+    <End Type="Gestion_RiesgosModel.configuracionRiesgo" Role="configuracionRiesgo" Multiplicity="0..1" />
+    <End Type="Gestion_RiesgosModel.AccionRiesgo" Role="AccionRiesgo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="configuracionRiesgo">
+        <PropertyRef Name="codigoAccionRiesgo" />
+      </Principal>
+      <Dependent Role="AccionRiesgo">
+        <PropertyRef Name="codigoAccionRiesgo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_detalleAnalisisRiesgo_cabeceraAnalisisRiesgo">
+    <End Type="Gestion_RiesgosModel.cabeceraAnalisisRiesgo" Role="cabeceraAnalisisRiesgo" Multiplicity="1" />
+    <End Type="Gestion_RiesgosModel.detalleAnalisisRiesgo" Role="detalleAnalisisRiesgo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cabeceraAnalisisRiesgo">
+        <PropertyRef Name="codigoAnalisisRiesgo" />
+      </Principal>
+      <Dependent Role="detalleAnalisisRiesgo">
+        <PropertyRef Name="codigoAnalisisRiesgo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_detalleAnalisisRiesgo_categoriasAmenazas">
+    <End Type="Gestion_RiesgosModel.categoriasAmenaza" Role="categoriasAmenaza" Multiplicity="0..1" />
+    <End Type="Gestion_RiesgosModel.detalleAnalisisRiesgo" Role="detalleAnalisisRiesgo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="categoriasAmenaza">
+        <PropertyRef Name="codigoCategoria" />
+      </Principal>
+      <Dependent Role="detalleAnalisisRiesgo">
+        <PropertyRef Name="codigoCategoriaAmenza" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_detalleAnalisisRiesgo_configuracionRiesgo">
+    <End Type="Gestion_RiesgosModel.configuracionRiesgo" Role="configuracionRiesgo" Multiplicity="0..1" />
+    <End Type="Gestion_RiesgosModel.detalleAnalisisRiesgo" Role="detalleAnalisisRiesgo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="configuracionRiesgo">
+        <PropertyRef Name="codigoAccionRiesgo" />
+      </Principal>
+      <Dependent Role="detalleAnalisisRiesgo">
+        <PropertyRef Name="codigoAccionRiesgo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_detalleAnalisisRiesgo_impactoRiesgo">
+    <End Type="Gestion_RiesgosModel.impactoRiesgo" Role="impactoRiesgo" Multiplicity="0..1" />
+    <End Type="Gestion_RiesgosModel.detalleAnalisisRiesgo" Role="detalleAnalisisRiesgo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="impactoRiesgo">
+        <PropertyRef Name="codigoImpacto" />
+      </Principal>
+      <Dependent Role="detalleAnalisisRiesgo">
+        <PropertyRef Name="codigoImpacto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_detalleAnalisisRiesgo_posibilidadRiesgo">
+    <End Type="Gestion_RiesgosModel.posibilidadRiesgo" Role="posibilidadRiesgo" Multiplicity="0..1" />
+    <End Type="Gestion_RiesgosModel.detalleAnalisisRiesgo" Role="detalleAnalisisRiesgo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="posibilidadRiesgo">
+        <PropertyRef Name="codigoPosibilidad" />
+      </Principal>
+      <Dependent Role="detalleAnalisisRiesgo">
+        <PropertyRef Name="codigoPosibilidad" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

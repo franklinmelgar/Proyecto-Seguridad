@@ -69,12 +69,14 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.btImprimirPlan = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btImprimirPlan);
             this.panel1.Controls.Add(this.btImprimirMatriz);
             this.panel1.Controls.Add(this.btImprimirPoliticas);
             this.panel1.Controls.Add(this.btAgregarAmenaza);
@@ -88,7 +90,7 @@
             // 
             this.btImprimirMatriz.Image = global::Matriz_Riesgo_Politica.Properties.Resources.printer;
             this.btImprimirMatriz.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btImprimirMatriz.Location = new System.Drawing.Point(537, 28);
+            this.btImprimirMatriz.Location = new System.Drawing.Point(285, 28);
             this.btImprimirMatriz.Margin = new System.Windows.Forms.Padding(4);
             this.btImprimirMatriz.Name = "btImprimirMatriz";
             this.btImprimirMatriz.Size = new System.Drawing.Size(246, 49);
@@ -100,7 +102,7 @@
             // 
             this.btImprimirPoliticas.Image = global::Matriz_Riesgo_Politica.Properties.Resources.printer;
             this.btImprimirPoliticas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btImprimirPoliticas.Location = new System.Drawing.Point(283, 28);
+            this.btImprimirPoliticas.Location = new System.Drawing.Point(539, 28);
             this.btImprimirPoliticas.Margin = new System.Windows.Forms.Padding(4);
             this.btImprimirPoliticas.Name = "btImprimirPoliticas";
             this.btImprimirPoliticas.Size = new System.Drawing.Size(246, 49);
@@ -191,6 +193,7 @@
             this.lst11.Name = "lst11";
             this.lst11.Size = new System.Drawing.Size(274, 109);
             this.lst11.TabIndex = 0;
+            this.lst11.DoubleClick += new System.EventHandler(this.lst11_DoubleClick);
             // 
             // lst12
             // 
@@ -203,6 +206,7 @@
             this.lst12.Name = "lst12";
             this.lst12.Size = new System.Drawing.Size(274, 109);
             this.lst12.TabIndex = 1;
+            this.lst12.DoubleClick += new System.EventHandler(this.lst12_DoubleClick);
             // 
             // lst13
             // 
@@ -215,6 +219,7 @@
             this.lst13.Name = "lst13";
             this.lst13.Size = new System.Drawing.Size(274, 109);
             this.lst13.TabIndex = 2;
+            this.lst13.DoubleClick += new System.EventHandler(this.lst13_DoubleClick);
             // 
             // lst14
             // 
@@ -227,6 +232,7 @@
             this.lst14.Name = "lst14";
             this.lst14.Size = new System.Drawing.Size(274, 109);
             this.lst14.TabIndex = 3;
+            this.lst14.DoubleClick += new System.EventHandler(this.lst14_DoubleClick);
             // 
             // lst15
             // 
@@ -239,6 +245,7 @@
             this.lst15.Name = "lst15";
             this.lst15.Size = new System.Drawing.Size(277, 109);
             this.lst15.TabIndex = 4;
+            this.lst15.DoubleClick += new System.EventHandler(this.lst15_DoubleClick);
             // 
             // lst21
             // 
@@ -251,6 +258,7 @@
             this.lst21.Name = "lst21";
             this.lst21.Size = new System.Drawing.Size(274, 109);
             this.lst21.TabIndex = 5;
+            this.lst21.DoubleClick += new System.EventHandler(this.lst21_DoubleClick);
             // 
             // lst22
             // 
@@ -263,6 +271,7 @@
             this.lst22.Name = "lst22";
             this.lst22.Size = new System.Drawing.Size(274, 109);
             this.lst22.TabIndex = 6;
+            this.lst22.DoubleClick += new System.EventHandler(this.lst22_DoubleClick);
             // 
             // lst23
             // 
@@ -275,6 +284,7 @@
             this.lst23.Name = "lst23";
             this.lst23.Size = new System.Drawing.Size(274, 109);
             this.lst23.TabIndex = 7;
+            this.lst23.DoubleClick += new System.EventHandler(this.lst23_DoubleClick);
             // 
             // lst24
             // 
@@ -287,6 +297,7 @@
             this.lst24.Name = "lst24";
             this.lst24.Size = new System.Drawing.Size(274, 109);
             this.lst24.TabIndex = 8;
+            this.lst24.DoubleClick += new System.EventHandler(this.lst24_DoubleClick);
             // 
             // lst25
             // 
@@ -299,6 +310,7 @@
             this.lst25.Name = "lst25";
             this.lst25.Size = new System.Drawing.Size(277, 109);
             this.lst25.TabIndex = 9;
+            this.lst25.DoubleClick += new System.EventHandler(this.lst25_DoubleClick);
             // 
             // lst31
             // 
@@ -311,6 +323,7 @@
             this.lst31.Name = "lst31";
             this.lst31.Size = new System.Drawing.Size(274, 109);
             this.lst31.TabIndex = 10;
+            this.lst31.DoubleClick += new System.EventHandler(this.lst31_DoubleClick);
             // 
             // lst32
             // 
@@ -323,6 +336,7 @@
             this.lst32.Name = "lst32";
             this.lst32.Size = new System.Drawing.Size(274, 109);
             this.lst32.TabIndex = 11;
+            this.lst32.DoubleClick += new System.EventHandler(this.lst32_DoubleClick);
             // 
             // lst33
             // 
@@ -335,6 +349,7 @@
             this.lst33.Name = "lst33";
             this.lst33.Size = new System.Drawing.Size(274, 109);
             this.lst33.TabIndex = 12;
+            this.lst33.DoubleClick += new System.EventHandler(this.lst33_DoubleClick);
             // 
             // lst34
             // 
@@ -347,6 +362,7 @@
             this.lst34.Name = "lst34";
             this.lst34.Size = new System.Drawing.Size(274, 109);
             this.lst34.TabIndex = 13;
+            this.lst34.DoubleClick += new System.EventHandler(this.lst34_DoubleClick);
             // 
             // lst35
             // 
@@ -359,6 +375,7 @@
             this.lst35.Name = "lst35";
             this.lst35.Size = new System.Drawing.Size(277, 109);
             this.lst35.TabIndex = 14;
+            this.lst35.DoubleClick += new System.EventHandler(this.lst35_DoubleClick);
             // 
             // lst41
             // 
@@ -371,6 +388,7 @@
             this.lst41.Name = "lst41";
             this.lst41.Size = new System.Drawing.Size(274, 109);
             this.lst41.TabIndex = 15;
+            this.lst41.DoubleClick += new System.EventHandler(this.lst41_DoubleClick);
             // 
             // lst42
             // 
@@ -383,6 +401,7 @@
             this.lst42.Name = "lst42";
             this.lst42.Size = new System.Drawing.Size(274, 109);
             this.lst42.TabIndex = 16;
+            this.lst42.DoubleClick += new System.EventHandler(this.lst42_DoubleClick);
             // 
             // lst43
             // 
@@ -395,6 +414,7 @@
             this.lst43.Name = "lst43";
             this.lst43.Size = new System.Drawing.Size(274, 109);
             this.lst43.TabIndex = 17;
+            this.lst43.DoubleClick += new System.EventHandler(this.lst43_DoubleClick);
             // 
             // lst44
             // 
@@ -407,6 +427,7 @@
             this.lst44.Name = "lst44";
             this.lst44.Size = new System.Drawing.Size(274, 109);
             this.lst44.TabIndex = 18;
+            this.lst44.DoubleClick += new System.EventHandler(this.lst44_DoubleClick);
             // 
             // lst45
             // 
@@ -419,6 +440,7 @@
             this.lst45.Name = "lst45";
             this.lst45.Size = new System.Drawing.Size(277, 109);
             this.lst45.TabIndex = 19;
+            this.lst45.DoubleClick += new System.EventHandler(this.lst45_DoubleClick);
             // 
             // lst51
             // 
@@ -431,6 +453,7 @@
             this.lst51.Name = "lst51";
             this.lst51.Size = new System.Drawing.Size(274, 111);
             this.lst51.TabIndex = 20;
+            this.lst51.DoubleClick += new System.EventHandler(this.lst51_DoubleClick);
             // 
             // lst52
             // 
@@ -443,6 +466,7 @@
             this.lst52.Name = "lst52";
             this.lst52.Size = new System.Drawing.Size(274, 111);
             this.lst52.TabIndex = 21;
+            this.lst52.DoubleClick += new System.EventHandler(this.lst52_DoubleClick);
             // 
             // lst53
             // 
@@ -455,6 +479,7 @@
             this.lst53.Name = "lst53";
             this.lst53.Size = new System.Drawing.Size(274, 111);
             this.lst53.TabIndex = 22;
+            this.lst53.DoubleClick += new System.EventHandler(this.lst53_DoubleClick);
             // 
             // lst54
             // 
@@ -467,6 +492,7 @@
             this.lst54.Name = "lst54";
             this.lst54.Size = new System.Drawing.Size(274, 111);
             this.lst54.TabIndex = 23;
+            this.lst54.DoubleClick += new System.EventHandler(this.lst54_DoubleClick);
             // 
             // lst55
             // 
@@ -479,6 +505,7 @@
             this.lst55.Name = "lst55";
             this.lst55.Size = new System.Drawing.Size(277, 111);
             this.lst55.TabIndex = 24;
+            this.lst55.DoubleClick += new System.EventHandler(this.lst55_DoubleClick);
             // 
             // label1
             // 
@@ -610,6 +637,19 @@
             this.label11.Text = "Severo";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btImprimirPlan
+            // 
+            this.btImprimirPlan.Image = global::Matriz_Riesgo_Politica.Properties.Resources.printer;
+            this.btImprimirPlan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btImprimirPlan.Location = new System.Drawing.Point(793, 28);
+            this.btImprimirPlan.Margin = new System.Windows.Forms.Padding(4);
+            this.btImprimirPlan.Name = "btImprimirPlan";
+            this.btImprimirPlan.Size = new System.Drawing.Size(246, 49);
+            this.btImprimirPlan.TabIndex = 23;
+            this.btImprimirPlan.Text = "Imprimir plan de seguridad";
+            this.btImprimirPlan.UseVisualStyleBackColor = true;
+            this.btImprimirPlan.Click += new System.EventHandler(this.btImprimirPlan_Click);
+            // 
             // matriz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -671,5 +711,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btImprimirPlan;
     }
 }

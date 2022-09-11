@@ -17,7 +17,6 @@ namespace Matriz_Riesgo_Politica
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public impactoRiesgo()
         {
-            this.accionRiesgoes = new HashSet<accionRiesgo>();
             this.detalleAnalisisRiesgoes = new HashSet<detalleAnalisisRiesgo>();
         }
     
@@ -26,8 +25,6 @@ namespace Matriz_Riesgo_Politica
         public Nullable<int> puntajeImpacto { get; set; }
         public string descripcionImpacto { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<accionRiesgo> accionRiesgoes { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<detalleAnalisisRiesgo> detalleAnalisisRiesgoes { get; set; }
     }
