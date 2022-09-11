@@ -83,7 +83,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(406, 178);
+            this.ClientSize = new System.Drawing.Size(416, 219);
             this.Controls.Add(this.btCrear);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
@@ -91,6 +91,7 @@
             this.Controls.Add(this.label1);
             this.Name = "CrearImpacto";
             this.Text = "CrearImpacto";
+            this.Load += new System.EventHandler(this.CrearImpacto_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

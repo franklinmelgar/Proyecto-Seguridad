@@ -31,5 +31,10 @@ namespace Matriz_Riesgo_Politica.Impacto
             MessageBox.Show("Activo Creado", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
+
+        private void CrearImpacto_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

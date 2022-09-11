@@ -246,6 +246,12 @@
     <EmbeddedResource Include="Impacto\CrearImpacto.resx">
       <DependentUpon>CrearImpacto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Impacto\EliminarImpacto.resx">
+      <DependentUpon>EliminarImpacto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Impacto\ModificarImpacto.resx">
+      <DependentUpon>ModificarImpacto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Matriz\agregarAmenaza.resx">
       <DependentUpon>agregarAmenaza.cs</DependentUpon>
     </EmbeddedResource>
