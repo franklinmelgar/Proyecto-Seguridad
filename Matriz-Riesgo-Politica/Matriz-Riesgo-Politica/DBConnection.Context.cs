@@ -25,15 +25,16 @@ namespace Matriz_Riesgo_Politica
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<accionRiesgo> accionRiesgoes { get; set; }
         public virtual DbSet<Activo> Activos { get; set; }
         public virtual DbSet<categoriasAmenaza> categoriasAmenazas { get; set; }
-        public virtual DbSet<detalleAnalisisRiesgo> detalleAnalisisRiesgoes { get; set; }
         public virtual DbSet<impactoRiesgo> impactoRiesgoes { get; set; }
         public virtual DbSet<posibilidadRiesgo> posibilidadRiesgoes { get; set; }
         public virtual DbSet<seccionPoliticaAmenaza> seccionPoliticaAmenazas { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<cabeceraAnalisisRiesgo> cabeceraAnalisisRiesgoes { get; set; }
         public virtual DbSet<enunciadoPoliticaAmenaza> enunciadoPoliticaAmenazas { get; set; }
+        public virtual DbSet<AccionRiesgo> AccionRiesgoes { get; set; }
+        public virtual DbSet<configuracionRiesgo> configuracionRiesgoes { get; set; }
+        public virtual DbSet<detalleAnalisisRiesgo> detalleAnalisisRiesgoes { get; set; }
     }
 }

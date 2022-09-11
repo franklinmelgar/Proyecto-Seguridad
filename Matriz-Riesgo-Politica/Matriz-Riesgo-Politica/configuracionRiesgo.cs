@@ -12,19 +12,20 @@ namespace Matriz_Riesgo_Politica
     using System;
     using System.Collections.Generic;
     
-    public partial class posibilidadRiesgo
+    public partial class configuracionRiesgo
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public posibilidadRiesgo()
+        public configuracionRiesgo()
         {
+            this.AccionRiesgoes = new HashSet<AccionRiesgo>();
             this.detalleAnalisisRiesgoes = new HashSet<detalleAnalisisRiesgo>();
         }
     
-        public int codigoPosibilidad { get; set; }
-        public string nivelPosibilidad { get; set; }
-        public Nullable<int> puntajePosibilidad { get; set; }
-        public string descripcionPosibilidad { get; set; }
+        public int codigoAccionRiesgo { get; set; }
+        public string descripcionAccionRiesgo { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<AccionRiesgo> AccionRiesgoes { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<detalleAnalisisRiesgo> detalleAnalisisRiesgoes { get; set; }
     }

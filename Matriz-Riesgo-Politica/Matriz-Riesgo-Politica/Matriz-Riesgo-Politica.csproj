@@ -61,7 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="accionRiesgo.cs">
+    <Compile Include="AccionRiesgo.cs">
       <DependentUpon>DBConnection.tt</DependentUpon>
     </Compile>
     <Compile Include="Activo.cs">
@@ -107,6 +107,9 @@
       <DependentUpon>DBConnection.tt</DependentUpon>
     </Compile>
     <Compile Include="categoriasAmenaza.cs">
+      <DependentUpon>DBConnection.tt</DependentUpon>
+    </Compile>
+    <Compile Include="configuracionRiesgo.cs">
       <DependentUpon>DBConnection.tt</DependentUpon>
     </Compile>
     <Compile Include="DBConnection.Context.cs">
@@ -163,11 +166,29 @@
     <Compile Include="Matriz\AgregarMatriz.Designer.cs">
       <DependentUpon>AgregarMatriz.cs</DependentUpon>
     </Compile>
+    <Compile Include="Matriz\detalleAmenaza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Matriz\detalleAmenaza.Designer.cs">
+      <DependentUpon>detalleAmenaza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Matriz\eliminarMatriz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Matriz\eliminarMatriz.Designer.cs">
+      <DependentUpon>eliminarMatriz.cs</DependentUpon>
+    </Compile>
     <Compile Include="Matriz\matriz.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Matriz\matriz.Designer.cs">
       <DependentUpon>matriz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Matriz\modificarMatriz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Matriz\modificarMatriz.Designer.cs">
+      <DependentUpon>modificarMatriz.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuPrincipal.cs">
       <SubType>Form</SubType>
@@ -231,8 +252,17 @@
     <EmbeddedResource Include="Matriz\AgregarMatriz.resx">
       <DependentUpon>AgregarMatriz.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Matriz\detalleAmenaza.resx">
+      <DependentUpon>detalleAmenaza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Matriz\eliminarMatriz.resx">
+      <DependentUpon>eliminarMatriz.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Matriz\matriz.resx">
       <DependentUpon>matriz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Matriz\modificarMatriz.resx">
+      <DependentUpon>modificarMatriz.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>

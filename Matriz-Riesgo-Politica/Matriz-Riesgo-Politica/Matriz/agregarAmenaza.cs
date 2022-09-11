@@ -14,6 +14,7 @@ namespace Matriz_Riesgo_Politica.Matriz
     public partial class agregarAmenaza : Form
     {
         Gestion_RiesgosEntities BD = new Gestion_RiesgosEntities();
+        public int codigoMatriz;
         private string amenaza;
         private int posibilidad;
         private int impacto;
@@ -72,6 +73,15 @@ namespace Matriz_Riesgo_Politica.Matriz
                 posibilidad = int.Parse(cmbPosibilidad.SelectedValue.ToString());
                 impacto = int.Parse(cmbImpacto.SelectedValue.ToString());
                 frmMatriz.Parametros(codigo, amenaza, posibilidad, impacto);
+
+                detalleAnalisisRiesgo detalle = new detalleAnalisisRiesgo();
+                detalle.codigoAnalisisRiesgo = codigoMatriz;
+                detalle.codigoCategoriaAmenza = int.Parse(cmbAmenaza.SelectedValue.ToString());
+                detalle.codigoImpacto = int.Parse(cmbImpacto.SelectedValue.ToString());
+                detalle.codigoPosibilidad = int.Parse(cmbPosibilidad.SelectedValue.ToString());
+                detalle.codigoAccionRiesgo = 1;
+                BD.detalleAnalisisRiesgoes.Add(detalle);
+                BD.SaveChanges();
                 this.Close();
             }
         }
