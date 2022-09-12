@@ -739,59 +739,63 @@ namespace Matriz_Riesgo_Politica.Matriz
                 PdfWriter.GetInstance(doc, new FileStream(direccion, FileMode.Create));
                 doc.Open();
 
-                PdfPTable tableColumns = new PdfPTable(6);
+                PdfPTable tableColumns = new PdfPTable(8);
+
+                Paragraph title = new Paragraph();
+                title.Font = FontFactory.GetFont(FontFactory.TIMES_BOLD, 18f, BaseColor.BLACK);
+                title.Alignment = Element.ALIGN_CENTER;
+                title.Add("Matriz de Riesgo");
+                doc.Add(title);
+                doc.Add(Chunk.NEWLINE);
+                doc.Add(Chunk.NEWLINE);
 
                 var dataDetail = GetDataDetail(int.Parse(codigoMatriz));
-                // amenzaDetail = dataDetail.
+                var amenazas = BD.detalleAnalisisRiesgoes.Where(a => a.codigoAnalisisRiesgo == dataDetail.codigoAnalisisRiesgo).ToList();
 
-               // var amenazas = BD.categoriasAmenazas.Where(e=> );
+                tableColumns.AddCell(new Paragraph("Situacion / Riesgo"));
+                tableColumns.AddCell(new Paragraph("Probabilidad"));
+                tableColumns.AddCell(new Paragraph("Impacto"));
+                tableColumns.AddCell(new Paragraph("Categoria del Riesgo"));
+                tableColumns.AddCell(new Paragraph("Evitar"));
+                tableColumns.AddCell(new Paragraph("Transferir"));
+                tableColumns.AddCell(new Paragraph("Mitigar"));
+                tableColumns.AddCell(new Paragraph("Aceptar"));
 
-                tableColumns.AddCell("");
-                tableColumns.AddCell("Insignificante");
-                tableColumns.AddCell("Menor");
-                tableColumns.AddCell("Moderado");
-                tableColumns.AddCell("Mayor");
-                tableColumns.AddCell("Severo");
+                amenazas.ForEach(amenaza => {
+                    var nombreAmenaza = BD.categoriasAmenazas.FirstOrDefault(a=> a.codigoCategoria == amenaza.codigoCategoriaAmenza);
+                    tableColumns.AddCell(new Paragraph(nombreAmenaza.nombreCategoriaRiesgo));
 
-                tableColumns.AddCell("Row 2, Col 1");
-                tableColumns.AddCell("Row 2, Col 2");
-                tableColumns.AddCell("Row 2, Col 3");
-                tableColumns.AddCell("Row 2, Col 4");
-                tableColumns.AddCell("Row 2, Col 5");
-                tableColumns.AddCell("Row 2, Col 6");
+                    var probabilidad = BD.posibilidadRiesgoes.Where(a => a.codigoPosibilidad == amenaza.codigoPosibilidad).FirstOrDefault();
 
-                tableColumns.AddCell("Row 3, Col 1");
-                tableColumns.AddCell("Row 3, Col 2");
-                tableColumns.AddCell("Row 3, Col 3");
-                tableColumns.AddCell("Row 3, Col 4");
-                tableColumns.AddCell("Row 3, Col 5");
-                tableColumns.AddCell("Row 3, Col 6");
+                    tableColumns.AddCell(probabilidad.puntajePosibilidad.ToString() + " - " + probabilidad.nivelPosibilidad);
 
-                tableColumns.AddCell("Row 4, Col 1");
-                tableColumns.AddCell("Row 4, Col 2");
-                tableColumns.AddCell("Row 4, Col 3");
-                tableColumns.AddCell("Row 4, Col 4");
-                tableColumns.AddCell("Row 4, Col 5");
-                tableColumns.AddCell("Row 4, Col 6");
+                    var impacto = BD.impactoRiesgoes.Where(a => a.codigoImpacto == amenaza.codigoImpacto).FirstOrDefault();
 
-                tableColumns.AddCell("Row 5, Col 1");
-                tableColumns.AddCell("Row 5, Col 2");
-                tableColumns.AddCell("Row 5, Col 3");
-                tableColumns.AddCell("Row 5, Col 4");
-                tableColumns.AddCell("Row 5, Col 5");
-                tableColumns.AddCell("Row 5, Col 6");
+                    tableColumns.AddCell(impacto.puntajeImpacto.ToString());
 
-                tableColumns.AddCell("Row 6, Col 1");
-                tableColumns.AddCell("Row 6, Col 2");
-                tableColumns.AddCell("Row 6, Col 3");
-                tableColumns.AddCell("Row 6, Col 4");
-                tableColumns.AddCell("Row 6, Col 5");
-                tableColumns.AddCell("Row 6, Col 6");
+                    var categorizacionDelRiesgo = probabilidad.puntajePosibilidad * impacto.puntajeImpacto;
+                    string categoria = GetCategoria(categorizacionDelRiesgo);
 
-                //Imprimir Listado
-                obtenerAmenazas(doc);
+                    tableColumns.AddCell(categorizacionDelRiesgo.ToString()+ " - "+ categoria);
 
+                    var configuracion = BD.configuracionRiesgoes.FirstOrDefault(a=> a.codigoAccionRiesgo == amenaza.codigoAccionRiesgo);
+
+                    tableColumns.AddCell(1 == configuracion.codigoAccionRiesgo ? "X" : " ");
+                    tableColumns.AddCell(2 == configuracion.codigoAccionRiesgo ? "X" : " ");
+                    tableColumns.AddCell(3 == configuracion.codigoAccionRiesgo ? "X" : " ");
+                    tableColumns.AddCell(4 == configuracion.codigoAccionRiesgo ? "X" : " ");
+                });
                 doc.Add(tableColumns);
+                doc.Add(Chunk.NEWLINE);
+                doc.Add(Chunk.NEWLINE);
+
+                cabeceraAnalisisRiesgo infoCabecera = obtenerCabecera(int.Parse(codigoMatriz));
+                doc.Add(new Paragraph("Codigo de matriz: " + infoCabecera.codigoAnalisisRiesgo));
+                doc.Add(new Paragraph("Version: 1.1"));
+                doc.Add(new Paragraph("Fecha de creacion: " + DateTime.Parse(infoCabecera.fechaCreacion.ToString()).ToShortDateString()));
+                doc.Add(new Paragraph("Nombre del responsable: " + infoCabecera.nombreAuditor));
+                doc.Add(new Paragraph("Nombre del aprobador: " + infoCabecera.nombreAprobador));
+                doc.Add(new Paragraph("Nivel de confidencialidad: " + infoCabecera.nivelConfidencialidad));
 
                 doc.Close();
 
@@ -799,6 +803,30 @@ namespace Matriz_Riesgo_Politica.Matriz
 
             }
 
+        }
+
+        private string GetCategoria(int? categorizacionDelRiesgo)
+        {
+            if (categorizacionDelRiesgo <= 1)
+            {
+                return "Muy Bajo";
+            }
+            else if (categorizacionDelRiesgo > 1 && categorizacionDelRiesgo <= 4)
+            {
+                return "Bajo";
+            }
+            else if (categorizacionDelRiesgo > 4 && categorizacionDelRiesgo <= 9)
+            {
+                return "Medio";
+            }
+            else if (categorizacionDelRiesgo > 9 && categorizacionDelRiesgo <= 12)
+            {
+                return "Alto";
+            }
+            else
+            {
+                return "Muy Alto";
+            }
         }
     }
 }
