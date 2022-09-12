@@ -785,9 +785,6 @@ namespace Matriz_Riesgo_Politica.Matriz
                     tableColumns.AddCell(3 == configuracion.codigoAccionRiesgo ? "X" : " ");
                     tableColumns.AddCell(4 == configuracion.codigoAccionRiesgo ? "X" : " ");
                 });
-                doc.Add(tableColumns);
-                doc.Add(Chunk.NEWLINE);
-                doc.Add(Chunk.NEWLINE);
 
                 cabeceraAnalisisRiesgo infoCabecera = obtenerCabecera(int.Parse(codigoMatriz));
                 doc.Add(new Paragraph("Codigo de matriz: " + infoCabecera.codigoAnalisisRiesgo));
@@ -796,6 +793,11 @@ namespace Matriz_Riesgo_Politica.Matriz
                 doc.Add(new Paragraph("Nombre del responsable: " + infoCabecera.nombreAuditor));
                 doc.Add(new Paragraph("Nombre del aprobador: " + infoCabecera.nombreAprobador));
                 doc.Add(new Paragraph("Nivel de confidencialidad: " + infoCabecera.nivelConfidencialidad));
+
+                doc.Add(Chunk.NEWLINE);
+                doc.Add(Chunk.NEWLINE);
+
+                doc.Add(tableColumns);
 
                 doc.Close();
 
