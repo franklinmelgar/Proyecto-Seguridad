@@ -771,7 +771,7 @@ namespace Matriz_Riesgo_Politica.Matriz
 
                     var impacto = BD.impactoRiesgoes.Where(a => a.codigoImpacto == amenaza.codigoImpacto).FirstOrDefault();
 
-                    tableColumns.AddCell(impacto.puntajeImpacto.ToString());
+                    tableColumns.AddCell(impacto.puntajeImpacto.ToString() + " - " + impacto.nivelImpacto );
 
                     var categorizacionDelRiesgo = probabilidad.puntajePosibilidad * impacto.puntajeImpacto;
                     string categoria = GetCategoria(categorizacionDelRiesgo);

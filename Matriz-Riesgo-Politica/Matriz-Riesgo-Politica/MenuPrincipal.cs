@@ -2,6 +2,7 @@
 using Matriz_Riesgo_Politica.Amenazas;
 using Matriz_Riesgo_Politica.Impacto;
 using Matriz_Riesgo_Politica.Matriz;
+using Matriz_Riesgo_Politica.Probabilidad;
 using System;
 using System.Data;
 using System.Drawing;
@@ -109,6 +110,7 @@ namespace Matriz_Riesgo_Politica
         private void btPosibilidad_Click(object sender, EventArgs e)
         {
             estableColor("Posibilidades");
+            obtenerPosibilidades();
             tabContenedorPrincipal.SelectedTab = tabContenedorPrincipal.TabPages[2];
         }
 
@@ -128,6 +130,18 @@ namespace Matriz_Riesgo_Politica
                 c.puntajeImpacto
             }).ToList();
             impactGrid.DataSource = impactos;
+        }
+
+        private void obtenerPosibilidades()
+        {
+            var posibilidades = DB.posibilidadRiesgoes.Select(c => new
+            {
+                c.codigoPosibilidad,
+                c.nivelPosibilidad,
+                c.puntajePosibilidad
+            }).ToList();
+
+            grdPosibilidades.DataSource = posibilidades;
         }
 
         private void obtenerMatrices()
@@ -221,7 +235,8 @@ namespace Matriz_Riesgo_Politica
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+            crearprobabilidad crear = new crearprobabilidad();
+            crear.Show();
         }
 
         private void btModificarMatriz_Click(object sender, EventArgs e)
@@ -247,6 +262,40 @@ namespace Matriz_Riesgo_Politica
             eliminar.codigoMatriz = codigoMatriz;
             eliminar.Show();
             
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            int codigoPosibilidad = int.Parse(grdPosibilidades.Rows[grdPosibilidades.CurrentRow.Index].Cells[0].Value.ToString());
+            actualizarprobabilidad actualizar = new actualizarprobabilidad();
+            actualizar.codigoPosibilidad = codigoPosibilidad;
+            actualizar.Show();
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            int codigoPosibilidad = int.Parse(impactGrid.Rows[impactGrid.CurrentRow.Index].Cells[0].Value.ToString());
+            modificarImpacto modificar = new modificarImpacto();
+            modificar.codigoPosibilidad = codigoPosibilidad;
+            modificar.Show();
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            int codigoPosibilidad = int.Parse(grdPosibilidades.Rows[grdPosibilidades.CurrentRow.Index].Cells[0].Value.ToString());
+            eliminarprobabilidad eliminar = new eliminarprobabilidad();
+            eliminar.codigoPosibilidad = codigoPosibilidad;
+            eliminar.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int codigoPosibilidad = int.Parse(impactGrid.Rows[impactGrid.CurrentRow.Index].Cells[0].Value.ToString());
+            eliminarImpacto eliminar = new eliminarImpacto();
+            eliminar.codigoPosibilidad = codigoPosibilidad;
+            eliminar.Show();
         }
     }
 }

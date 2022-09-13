@@ -16,5 +16,22 @@ namespace Matriz_Riesgo_Politica.Impacto
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            impactoRiesgo impacto = new impactoRiesgo();
+            impacto.nivelImpacto = txtNivelImpacto.Text;
+            impacto.puntajeImpacto = int.Parse(txtPuntaje.Text);
+            impacto.descripcionImpacto = txtDescripcion.Text;
+
+            MessageBox.Show("Se agrego correctamente el impacto", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
+
+        }
     }
 }
